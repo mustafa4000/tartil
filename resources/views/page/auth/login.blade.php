@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -119,9 +118,9 @@
                 <form method="POST" action="{{ route('login') }}" class="needs-validation" novalidate="">
                   @csrf
                   <div class="form-group">
-                    <label for="email">Email</label>
-                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" tabindex="1" value="{{ old('email') }}" required autocomplete="email" autofocus>
-                    @error('email')
+                    <label for="username">Email</label>
+                    <input id="username" type="text" name="username" class="form-control @error('username') is-invalid @enderror" tabindex="1" value="{{ old('username') }}" required autocomplete="email" autofocus>
+                    @error('username')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>

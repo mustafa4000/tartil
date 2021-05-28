@@ -91,31 +91,31 @@
             </div>
           </div>
         </form>
-        <ul class="navbar-nav navbar-right">
-          
+        <ul class="navbar-nav navbar-right">  
           @if (Route::has('login'))
-              <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                <div class="row">
-                  <div class="col-3">
-                    <a href="" style="color:black;"> <i class="far fa-donate">Donate|</i></a>   
-                  </div>
-                  <div class="col-2">
-                    <a href="" style="color:black;"> <i class="far fa-globe">EN</i></a>   
-                  </div>
-                  <div class="col"> 
-                    @auth
-                    <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline" style="color:black;">Home</a>
-                    @else
-                    <a href="{{ route('login') }}" class="text-sm text-gray-700 underline"> <b>Log in</b> </a> 
-                    @if (Route::has('register'))
-                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline"> <b>Sign Up</b> </a>
-                    @endif
-                    
-                    @endauth
-                  </div>
+            <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+              <div class="row">
+                <div class="col-3">
+                  <a href="" style="color:black;"> <i class="far fa-donate">Donate|</i></a>   
+                </div>
+                <div class="col-2">
+                  <a href="" style="color:black;"> <i class="far fa-globe">EN</i></a>   
+                </div>
+                <div class="col"> 
+                  @auth
+                  <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline" style="color:black;">Home</a>
+                  @else
+                  <a href="{{ route('login') }}" class="text-sm text-gray-700 underline"> <b>Log in</b> </a> 
+                  @if (Route::has('register'))
+                      <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline"> <b>Sign Up</b> </a>
+                  @endif
+                  
+                  @endauth
                 </div>
               </div>
+            </div>
           @endif
+
         </ul>
       </nav>
       <div class="main-sidebar" style="background: #169E53;">
@@ -2486,10 +2486,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="{{ asset('/assets/js/stisla.js') }}"></script>
-
   <!-- JS Libraies -->
-
-
 
   <!-- Template JS File -->
   <script src="{{ asset('/assets/js/scripts.js') }}"></script>
