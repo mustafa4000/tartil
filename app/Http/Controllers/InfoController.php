@@ -22,72 +22,6 @@ class InfoController extends Controller
         
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Info  $info
-     * @return \Illuminate\Http\Response
-     */
-    public function show( $info)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Info  $info
-     * @return \Illuminate\Http\Response
-     */
-    public function edit( $info)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Info  $info
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request,  $info)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Info  $info
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy( $info)
-    {
-        //
-    }
-
     public function alquran()
     {
         return view('pages.alquran');
@@ -111,6 +45,7 @@ class InfoController extends Controller
     {
         return view('pages.receiter');
     }
+
 
 
 }

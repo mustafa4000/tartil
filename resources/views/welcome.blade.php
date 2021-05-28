@@ -104,7 +104,7 @@
                   </div>
                   <div class="col"> 
                     @auth
-                    <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline" style="color:black;">Home</a>
+                    <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline" style="color:black;">Home</a>
                     @else
                     <a href="{{ route('login') }}" class="text-sm text-gray-700 underline"> <b>Log in</b> </a> 
                     @if (Route::has('register'))

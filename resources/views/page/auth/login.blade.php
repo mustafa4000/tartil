@@ -19,7 +19,7 @@
 </head>
 
 <body>
-  <div id="app">
+  {{-- <div id="app">
     <section class="section">
       <div class="container mt-5">
         <div class="row">
@@ -98,8 +98,81 @@
         </div>
       </div>
     </section>
-  </div>
+  </div> --}}
 
+  <div id="app">
+    <section class="section">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
+            <div class="login-brand">
+              {{-- <img src="{{ asset('/assets/img/stisla-fill.svg') }}" alt="logo" width="100" class="shadow-light rounded-circle"> --}}
+            </div>
+
+            <div class="card card-light">
+              <div class="card container m-auto">
+                <div><h2 style="color: black;">Log in to <b style="color: green;">Tartil.me</b> </h2></div>
+                <div><p style="color: black;">Don't have account ?  <a href="{{ route('register') }}" style="color: green;">Sign Up</a></p></div>
+              </div>
+
+              <div class="card-body">
+                <form method="POST" action="{{ route('login') }}" class="needs-validation" novalidate="">
+                  @csrf
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" tabindex="1" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                    @error('email')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                  </div>
+
+                  <div class="form-group">
+                    <label for="password" class="control-label">Password</label>
+                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" tabindex="2" required autocomplete="current-password">
+                    @error('password')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+
+                    <div class="float-left">
+                      @if (Route::has('password.request'))
+                        <a class="text-small" href="{{ route('password.request') }}">
+                            {{ __('Forgot Your Password?') }}
+                        </a>
+                      @endif
+                    </div>
+                  </div>
+
+                  {{-- <div class="form-group">
+                      <div class="custom-control custom-checkbox">
+                      <input type="checkbox" name="remember" class="custom-control-input" tabindex="3" id="remember-me">
+                      <label class="custom-control-label" for="remember-me">Remember Me</label>
+                      </div>
+                  </div> --}} 
+
+                  <div class="form-group row">
+                    <div class="col">
+                      <button type="submit" class="btn btn-success btn-lg btn-block" tabindex="2">
+                        {{ __('Login') }}
+                      </button>
+                    </div>
+                    <div class="col">
+                      <button type="submit" class="btn btn-light btn-lg btn-block" tabindex="2">
+                        <i class="fab fa-google"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
   <!-- General JS Scripts -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

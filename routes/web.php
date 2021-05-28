@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\InfoController;
-use App\Http\Controllers\Namaqori;
 use App\Http\Controllers\NamaqoriController;
 
 /*
@@ -20,14 +19,17 @@ use App\Http\Controllers\NamaqoriController;
 Route::get('/', function () {
     return view('welcome');
 });
+// Route::view('/dashboard','dashboard');
 
-Route::view('/dashboard','dashboard');
+Route::get('/login', [App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('page.auth.login');
+Route::get('/register', [App\Http\Controllers\Auth\RegisterController::class, 'showRegistrationForm'])->name('page.auth.register');
+Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index']);
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-route::resource('/index' , InfoController::class);
+// route::resource('/index' , InfoController::class);
 Route::get('favorite', [InfoController::class, 'favorite'])->name('pages.favorite');
 Route::get('alquran', [InfoController::class, 'alquran'])->name('pages.alquran');
 Route::get('playlist', [InfoController::class, 'playlist'])->name('pages.playlist');
@@ -42,5 +44,3 @@ Route::get('Brown', [NamaqoriController::class, 'Brown'])->name('pages.receiter.
 Route::get('Basit', [NamaqoriController::class, 'Basit'])->name('pages.receiter.Basit');
 Route::get('Obeikan', [NamaqoriController::class, 'Obeikan'])->name('pages.receiter.Obeikan');
 Route::get('Albudair', [NamaqoriController::class, 'Albudair'])->name('pages.receiter.Albudair');
-
-

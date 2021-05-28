@@ -8,7 +8,7 @@
     </div>
       <ul class="sidebar-menu active">
         <li class="nav-item dropdown">
-          <a href="{{ route('home') }}"><i class="fas fa-home"></i><span style="color:white">Home</span></a>
+          <a href=""><i class="fas fa-home"></i><span style="color:white">Home</span></a>
         </li>
         <li class="nav-item dropdown">
           <a href="{{ route('pages.favorite') }}"><i class="fas fa-star"></i><span style="color:white">Favorite</span></a>
@@ -32,3 +32,6 @@
       </ul>
   </aside>
 </div>
+
+
+

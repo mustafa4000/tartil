@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-lg main-navbar" style="background: white">
+
+<nav class="navbar navbar-expand-lg main-navbar">
   <form class="form-inline mr-auto">
     <ul class="navbar-nav mr-3">
       <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
@@ -68,101 +69,155 @@
     </div>
   </form>
   <ul class="navbar-nav navbar-right">
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <!-- Left Side Of Navbar -->
-      <ul class="navbar-nav mr-auto">
-
-      </ul>
-
-      <!-- Right Side Of Navbar -->
-      <ul class="navbar-nav ml-auto">
-          <!-- Authentication Links -->
-          @guest
-              @if (Route::has('login'))
-                  <li class="nav-item">
-                      <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                  </li>
-              @endif
-
-              @if (Route::has('register'))
-                  <li class="nav-item">
-                      <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                  </li>
-              @endif
-          @else
-              <li class="nav-item dropdown">
-                  <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                      {{ Auth::user()->name }}
-                  </a>
-
-                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="{{ route('logout') }}"
-                         onclick="event.preventDefault();
-                                       document.getElementById('logout-form').submit();">
-                          {{ __('Logout') }}
-                      </a>
-
-                      <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                          @csrf
-                      </form>
+      <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle beep"><i class="far fa-envelope"></i></a>
+          <div class="dropdown-menu dropdown-list dropdown-menu-right">
+              <div class="dropdown-header">Messages
+              <div class="float-right">
+                  <a href="#">Mark All As Read</a>
+              </div>
+              </div>
+              <div class="dropdown-list-content dropdown-list-message">
+              <a href="#" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-avatar">
+                  <img alt="image" src="../assets/img/avatar/avatar-1.png" class="rounded-circle">
+                  <div class="is-online"></div>
                   </div>
-              </li>
-          @endguest
-      </ul>
-  </div>
+                  <div class="dropdown-item-desc">
+                  <b>Kusnaedi</b>
+                  <p>Hello, Bro!</p>
+                  <div class="time">10 Hours Ago</div>
+                  </div>
+              </a>
+              <a href="#" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-avatar">
+                  <img alt="image" src="../assets/img/avatar/avatar-2.png" class="rounded-circle">
+                  </div>
+                  <div class="dropdown-item-desc">
+                  <b>Dedik Sugiharto</b>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                  <div class="time">12 Hours Ago</div>
+                  </div>
+              </a>
+              <a href="#" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-avatar">
+                  <img alt="image" src="../assets/img/avatar/avatar-3.png" class="rounded-circle">
+                  <div class="is-online"></div>
+                  </div>
+                  <div class="dropdown-item-desc">
+                  <b>Agung Ardiansyah</b>
+                  <p>Sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <div class="time">12 Hours Ago</div>
+                  </div>
+              </a>
+              <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-avatar">
+                  <img alt="image" src="../assets/img/avatar/avatar-4.png" class="rounded-circle">
+                  </div>
+                  <div class="dropdown-item-desc">
+                  <b>Ardian Rahardiansyah</b>
+                  <p>Duis aute irure dolor in reprehenderit in voluptate velit ess</p>
+                  <div class="time">16 Hours Ago</div>
+                  </div>
+              </a>
+              <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-avatar">
+                  <img alt="image" src="../assets/img/avatar/avatar-5.png" class="rounded-circle">
+                  </div>
+                  <div class="dropdown-item-desc">
+                  <b>Alfa Zulkarnain</b>
+                  <p>Exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+                  <div class="time">Yesterday</div>
+                  </div>
+              </a>
+              </div>
+              <div class="dropdown-footer text-center">
+              <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+              </div>
+          </div>
+      </li>
+      <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
+          <div class="dropdown-menu dropdown-list dropdown-menu-right">
+              <div class="dropdown-header">Notifications
+              <div class="float-right">
+                  <a href="#">Mark All As Read</a>
+              </div>
+              </div>
+              <div class="dropdown-list-content dropdown-list-icons">
+              <a href="#" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-icon bg-primary text-white">
+                  <i class="fas fa-code"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                  Template update is available now!
+                  <div class="time text-primary">2 Min Ago</div>
+                  </div>
+              </a>
+              <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-info text-white">
+                  <i class="far fa-user"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                  <b>You</b> and <b>Dedik Sugiharto</b> are now friends
+                  <div class="time">10 Hours Ago</div>
+                  </div>
+              </a>
+              <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-success text-white">
+                  <i class="fas fa-check"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                  <b>Kusnaedi</b> has moved task <b>Fix bug header</b> to <b>Done</b>
+                  <div class="time">12 Hours Ago</div>
+                  </div>
+              </a>
+              <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-danger text-white">
+                  <i class="fas fa-exclamation-triangle"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                  Low disk space. Let's clean it!
+                  <div class="time">17 Hours Ago</div>
+                  </div>
+              </a>
+              <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-info text-white">
+                  <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                  Welcome to Stisla template!
+                  <div class="time">Yesterday</div>
+                  </div>
+              </a>
+              </div>
+              <div class="dropdown-footer text-center">
+              <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+              </div>
+          </div>
+      </li>
+      <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+          <img alt="image" src="../assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+          <div class="d-sm-none d-lg-inline-block">Hi, Ujang Maman</div></a>
+          <div class="dropdown-menu dropdown-menu-right">
+              <div class="dropdown-title">Logged in 5 min ago</div> 
+              <a href="features-profile.html" class="dropdown-item has-icon">
+                  <i class="far fa-user"></i> Profile
+              </a>
+              <a href="features-activities.html" class="dropdown-item has-icon">
+                  <i class="fas fa-bolt"></i> Activities
+              </a>
+              <a href="features-settings.html" class="dropdown-item has-icon">
+                  <i class="fas fa-cog"></i> Settings
+              </a> 
+              <div class="dropdown-divider"></div>
+              <a href="{{ route('logout') }}" class="dropdown-item has-icon text-danger"
+                  onclick="event.preventDefault();
+                              document.getElementById('logout-form').submit();">
+                  <i class="fas fa-sign-out-alt"></i> {{ __('Logout') }}
+              </a>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                  @csrf
+              </form>
+          </div>
+      </li>
   </ul>
 </nav>
-
-{{-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-  <div class="container">
-      <a class="navbar-brand" href="{{ url('/') }}">
-          {{ config('app.name', 'Laravel') }}
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <!-- Left Side Of Navbar -->
-          <ul class="navbar-nav mr-auto">
-
-          </ul>
-
-          <!-- Right Side Of Navbar -->
-          <ul class="navbar-nav ml-auto">
-              <!-- Authentication Links -->
-              @guest
-                  @if (Route::has('login'))
-                      <li class="nav-item">
-                          <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                      </li>
-                  @endif
-
-                  @if (Route::has('register'))
-                      <li class="nav-item">
-                          <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                      </li>
-                  @endif
-              @else
-                  <li class="nav-item dropdown">
-                      <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                          {{ Auth::user()->name }}
-                      </a>
-
-                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="{{ route('logout') }}"
-                             onclick="event.preventDefault();
-                                           document.getElementById('logout-form').submit();">
-                              {{ __('Logout') }}
-                          </a>
-
-                          <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                              @csrf
-                          </form>
-                      </div>
-                  </li>
-              @endguest
-          </ul>
-      </div>
-  </div>
-</nav> --}}

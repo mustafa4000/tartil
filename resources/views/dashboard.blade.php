@@ -17,7 +17,7 @@
 
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
-
+  
 <body>
   <div id="app">
     <div class="main-wrapper">
@@ -92,30 +92,156 @@
           </div>
         </form>
         <ul class="navbar-nav navbar-right">
-          
-          @if (Route::has('login'))
-              <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                <div class="row">
-                  <div class="col-3">
-                    <a href="" style="color:black;"> <i class="far fa-donate">Donate|</i></a>   
-                  </div>
-                  <div class="col-2">
-                    <a href="" style="color:black;"> <i class="far fa-globe">EN</i></a>   
-                  </div>
-                  <div class="col"> 
-                    @auth
-                    <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline" style="color:black;">Home</a>
-                    @else
-                    <a href="{{ route('login') }}" class="text-sm text-gray-700 underline"> <b>Log in</b> </a> 
-                    @if (Route::has('register'))
-                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline"> <b>Sign Up</b> </a>
-                    @endif
-                    
-                    @endauth
-                  </div>
+            <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle beep"><i class="far fa-globe"></i></a>
+                <div class="dropdown-menu dropdown-list dropdown-menu-right">
+                    <div class="dropdown-header">Messages
+                    <div class="float-right">
+                        <a href="#">Mark All As Read</a>
+                    </div>
+                    </div>
+                    <div class="dropdown-list-content dropdown-list-message">
+                    <a href="#" class="dropdown-item dropdown-item-unread">
+                        <div class="dropdown-item-avatar">
+                        <img alt="image" src="../assets/img/avatar/avatar-1.png" class="rounded-circle">
+                        <div class="is-online"></div>
+                        </div>
+                        <div class="dropdown-item-desc">
+                        <b>Kusnaedi</b>
+                        <p>Hello, Bro!</p>
+                        <div class="time">10 Hours Ago</div>
+                        </div>
+                    </a>
+                    <a href="#" class="dropdown-item dropdown-item-unread">
+                        <div class="dropdown-item-avatar">
+                        <img alt="image" src="../assets/img/avatar/avatar-2.png" class="rounded-circle">
+                        </div>
+                        <div class="dropdown-item-desc">
+                        <b>Dedik Sugiharto</b>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                        <div class="time">12 Hours Ago</div>
+                        </div>
+                    </a>
+                    <a href="#" class="dropdown-item dropdown-item-unread">
+                        <div class="dropdown-item-avatar">
+                        <img alt="image" src="../assets/img/avatar/avatar-3.png" class="rounded-circle">
+                        <div class="is-online"></div>
+                        </div>
+                        <div class="dropdown-item-desc">
+                        <b>Agung Ardiansyah</b>
+                        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <div class="time">12 Hours Ago</div>
+                        </div>
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <div class="dropdown-item-avatar">
+                        <img alt="image" src="../assets/img/avatar/avatar-4.png" class="rounded-circle">
+                        </div>
+                        <div class="dropdown-item-desc">
+                        <b>Ardian Rahardiansyah</b>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit ess</p>
+                        <div class="time">16 Hours Ago</div>
+                        </div>
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <div class="dropdown-item-avatar">
+                        <img alt="image" src="../assets/img/avatar/avatar-5.png" class="rounded-circle">
+                        </div>
+                        <div class="dropdown-item-desc">
+                        <b>Alfa Zulkarnain</b>
+                        <p>Exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+                        <div class="time">Yesterday</div>
+                        </div>
+                    </a>
+                    </div>
+                    <div class="dropdown-footer text-center">
+                    <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+                    </div>
                 </div>
-              </div>
-          @endif
+            </li>
+            <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-donate"></i></a>
+                <div class="dropdown-menu dropdown-list dropdown-menu-right">
+                    <div class="dropdown-header">Notifications
+                    <div class="float-right">
+                        <a href="#">Mark All As Read</a>
+                    </div>
+                    </div>
+                    <div class="dropdown-list-content dropdown-list-icons">
+                    <a href="#" class="dropdown-item dropdown-item-unread">
+                        <div class="dropdown-item-icon bg-primary text-white">
+                        <i class="fas fa-code"></i>
+                        </div>
+                        <div class="dropdown-item-desc">
+                        Template update is available now!
+                        <div class="time text-primary">2 Min Ago</div>
+                        </div>
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <div class="dropdown-item-icon bg-info text-white">
+                        <i class="far fa-user"></i>
+                        </div>
+                        <div class="dropdown-item-desc">
+                        <b>You</b> and <b>Dedik Sugiharto</b> are now friends
+                        <div class="time">10 Hours Ago</div>
+                        </div>
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <div class="dropdown-item-icon bg-success text-white">
+                        <i class="fas fa-check"></i>
+                        </div>
+                        <div class="dropdown-item-desc">
+                        <b>Kusnaedi</b> has moved task <b>Fix bug header</b> to <b>Done</b>
+                        <div class="time">12 Hours Ago</div>
+                        </div>
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <div class="dropdown-item-icon bg-danger text-white">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="dropdown-item-desc">
+                        Low disk space. Let's clean it!
+                        <div class="time">17 Hours Ago</div>
+                        </div>
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <div class="dropdown-item-icon bg-info text-white">
+                        <i class="fas fa-bell"></i>
+                        </div>
+                        <div class="dropdown-item-desc">
+                        Welcome to Stisla template!
+                        <div class="time">Yesterday</div>
+                        </div>
+                    </a>
+                    </div>
+                    <div class="dropdown-footer text-center">
+                    <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </li>
+            <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                <img alt="image" src="../assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+                <div class="d-sm-none d-lg-inline-block">Hi, Ujang Maman</div></a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-title">Logged in 5 min ago</div> 
+                    <a href="features-profile.html" class="dropdown-item has-icon">
+                        <i class="far fa-user"></i> Profile
+                    </a>
+                    <a href="features-activities.html" class="dropdown-item has-icon">
+                        <i class="fas fa-bolt"></i> Activities
+                    </a>
+                    <a href="features-settings.html" class="dropdown-item has-icon">
+                        <i class="fas fa-cog"></i> Settings
+                    </a> 
+                    <div class="dropdown-divider"></div>
+                    <a href="{{ route('logout') }}" class="dropdown-item has-icon text-danger"
+                        onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                        <i class="fas fa-sign-out-alt"></i> {{ __('Logout') }}
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                </div>
+            </li>
         </ul>
       </nav>
       <div class="main-sidebar" style="background: #169E53;">
@@ -131,7 +257,7 @@
                 <a href="#"><i class="fas fa-home"></i><span style="color:white">Home</span></a>
               </li>
               <li class="nav-item dropdown">
-                <a href="#"><i class="fas fa-star"></i><span style="color:white">Favorite</span></a>
+                <a href="{{ route('pages.favorite') }}"><i class="fas fa-star"></i><span style="color:white">Favorite</span></a>
               </li>
               <li class="nav-item dropdown">
                 <a href="#"><i class="fas fa-user"></i><span style="color:white">Reciter</span></a>
@@ -2488,8 +2614,6 @@
   <script src="{{ asset('/assets/js/stisla.js') }}"></script>
 
   <!-- JS Libraies -->
-
-
 
   <!-- Template JS File -->
   <script src="{{ asset('/assets/js/scripts.js') }}"></script>
