@@ -136,8 +136,8 @@
             <div class="card card-light">
                 {{-- <div class="card-header"><h2>Sign Up to <b style="color: green;">Tartil.me</b></h2></div> --}}
                 <div class="card container m-auto">
-                    <div><h2 style="color: black;">Sign Up to <b style="color: green;">Tartil.me</b> </h2></div>
-                    <div><p style="color: black;">Already have account ?  <a href="{{ route('login') }}" style="color: green;">Log In</a></p></div>
+                    <div><h2 style="color: #000000;">Sign Up to <b style="color:  #169E53;">Tartil.me</b> </h2></div>
+                    <div><p style="color: #000000;">Already have account ?  <a href="{{ route('login') }}" style="color:  #169E53;">Log In</a></p></div>
                 </div>
 
                 <div class="card-body">
@@ -145,8 +145,8 @@
                         @csrf
                         <div class="row">
                             <div class="form-group col-12">
-                                <label for="name">{{ __('Name') }}</label>
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <label for="name" style="color: #646464;">{{ __('Name') }}</label>
+                                <input id="name" style="background: #F6F6F6; type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Your name">
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -156,8 +156,8 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                            <label for="email" style="color: #646464;">Email</label>
+                            <input id="email" style="background: #F6F6F6; type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="emailname@mail.com">
                             @error('email')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -166,8 +166,8 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="password" class="d-block">{{ __('Password') }}</label>
-                            <input id="password" type="password" class="form-control pwstrength @error('password') is-invalid @enderror" data-indicator="pwindicator" name="password" required autocomplete="new-password">
+                            <label for="password" class="d-block" style="color: #646464;">{{ __('Password') }}</label>
+                            <input id="password" style="background: #F6F6F6; type="password" class="form-control pwstrength @error('password') is-invalid @enderror" data-indicator="pwindicator" name="password" required autocomplete="new-password" placeholder="8 minimum characters">
                             @error('password')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -180,8 +180,8 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="password-confirm">{{ __('Confirm Password') }}</label>
-                            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                            <label for="password-confirm" style="color: #646464;">{{ __('Confirm Password') }}</label>
+                            <input id="password-confirm" style="background: #F6F6F6; type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="8 minimum characters">
                         </div>
 
                         {{-- <div class="form-group">
@@ -193,12 +193,12 @@
 
                         <div class="form-group row">
                             <div class="col">
-                                <button type="submit" class="btn btn-success btn-lg btn-block">
+                                <button type="submit" class="btn btn-success btn-lg btn-block" style="background: #169E53;">
                                     {{ __('Register') }}
                                 </button>
                             </div>
                             <div class="col">
-                                <button type="submit" class="btn btn-light btn-lg btn-block">
+                                <button type="submit" class="btn btn-light btn-lg btn-block" style="background: #FFFFFF;">
                                     <i class="fab fa-google"></i>
                                 </button>
                             </div>

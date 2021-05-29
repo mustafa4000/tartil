@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\InfoController;
 use App\Http\Controllers\NamaqoriController;
+use Illuminate\Support\Facades\App;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +28,7 @@ Auth::routes();
 // Route::get('/register', [App\Http\Controllers\Auth\RegisterController::class, 'showRegistrationForm'])->name('page.auth.register');
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index']);
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     Route::get('favorite', [InfoController::class, 'favorite'])->name('pages.favorite');
     Route::get('alquran', [InfoController::class, 'alquran'])->name('pages.alquran');
@@ -41,3 +43,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('Obeikan', [NamaqoriController::class, 'Obeikan'])->name('pages.receiter.Obeikan');
     Route::get('Albudair', [NamaqoriController::class, 'Albudair'])->name('pages.receiter.Albudair');
 });
+
+Route::get('auth/google', [\App\Http\Controllers\GoogleController::class,'redirectToGoogle'])->name('google.login');
+Route::get('auth/google/callback', [\App\Http\Controllers\GoogleController::class,'handleGoogleCallback'])->name('google.callback');

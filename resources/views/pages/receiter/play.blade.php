@@ -4,16 +4,16 @@
 
 @section('content')
 <section class="section">
-    <h3>Receiter</h3>
+    <h3 style="color: #2F2F2F;">Receiter</h3>
         <div class="row g-0">
           <div class="col-md-2">
-            <img class="img-rounded" src="{{ url('/assets/imgtartil/Abdallah Kamel.jpg') }}" width="150" alt="..." style="border-radius:5px;">
+            <img class="img-rounded" src="{{ url('/assets/imgtartil/Abdallah Kamel.jpg') }}" width="132px" height="132px" style="border-radius: 8px;">
           </div>
           <div class="col-md-4">
             <div class="card-body">
-              <h5 class="card-title">Abdallah Kamel</h5>
-              <p class="card-text">Country: Saudi Arabia</p>
-              <p class="card-text"><small class="text-muted">Rewayat: Hafs A'n Assem</small></p>
+              <h5 class="card-title" style="color: #2F2F2F;">Abdallah Kamel</h5>
+              <p class="card-text" style="color: #9D9D9D;">Country: Mesir</p>
+              <p class="card-text"><small class="text-muted" style="color: #9D9D9D;">Rewayat: Hafs A'n Assem</small></p>
               
           </div>
         </div>    
@@ -21,26 +21,26 @@
     <br>
     <div class="row">
         <div class="col-2">
-          <a href="" style="color: green"> Hafs A'n Assem </a>
+          <a href="" style="color: #169E53"> Hafs A'n Assem </a>
         </div>
         <div class="col-5">
-          <a href="" style="color: black"> Hafs A'n Assem </a>
+          <a href="" style="color: #DCDCDC;"> Hafs A'n Assem </a>
         </div>
     </div>
 
     <div class="row col">
         <div class="col-0">
-            <i class="fas fa-play-circle fa-2x" style="color: green"></i>
+            <i class="fas fa-play-circle fa-2x" style="color: #169E53"></i>
         </div>
         <div class="col">
-            <h4 style="color: black">Play all</h4>
+            <h4 style="color: #2F2F2F;">Play all</h4>
         </div>
     </div>
     
     <p class="card-text"><small class="text-muted">Nama Surat</small></p>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:green;"></i>
+            <i class="fas fa-play" style="color:#169E53;"></i>
         </div>
         <div class="col">
             1. Al-Fatihah (The Opener)
@@ -50,7 +50,7 @@
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:green;"></i>
+            <i class="fas fa-play" style="color:#169E53;"></i>
         </div>
         <div class="col">
             2. Al-Baqarah (The Cow)
@@ -59,7 +59,7 @@
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:green;"></i>
+            <i class="fas fa-play" style="color:#169E53;"></i>
         </div>
         <div class="col">
             3. Ali-Imran (Family  of Imran)
@@ -68,7 +68,7 @@
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:green;"></i>
+            <i class="fas fa-play" style="color:#169E53;"></i>
         </div>
         <div class="col">
             4. An-Nisa (The Women)
@@ -77,7 +77,7 @@
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:green;"></i>
+            <i class="fas fa-play" style="color:#169E53;"></i>
         </div>
         <div class="col">
             5. Al-Maidah (The Table Spread)
@@ -86,7 +86,7 @@
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:green;"></i>
+            <i class="fas fa-play" style="color:#169E53;"></i>
         </div>
         <div class="col">
             6. Al-An’am (The Cattle)
@@ -95,7 +95,7 @@
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:green;"></i>
+            <i class="fas fa-play" style="color:#169E53;"></i>
         </div>
         <div class="col">
             7. Al-A’raf (The Heights)
@@ -104,7 +104,7 @@
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:green;"></i>
+            <i class="fas fa-play" style="color:#169E53;"></i>
         </div>
         <div class="col">
             8. Al-Anfal (The Spoils of War)
@@ -113,7 +113,7 @@
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:green;"></i>
+            <i class="fas fa-play" style="color:#169E53;"></i>
         </div>
         <div class="col">
             9. At-Tawbah (The Repetance)
@@ -122,7 +122,7 @@
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:green;"></i>
+            <i class="fas fa-play" style="color:#169E53;"></i>
         </div>
         <div class="col">
             10. Yunus (Yonah)
@@ -131,7 +131,7 @@
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:green;"></i>
+            <i class="fas fa-play" style="color:#169E53;"></i>
         </div>
         <div class="col">
             11. Hud (Hud)
@@ -140,7 +140,7 @@
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:green;"></i>
+            <i class="fas fa-play" style="color:#169E53;"></i>
         </div>
         <div class="col">
             12. Yusuf (Joseph)
@@ -149,7 +149,7 @@
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:green;"></i>
+            <i class="fas fa-play" style="color:#169E53;"></i>
         </div>
         <div class="col">
             13. Ar-Rad (The Thunder)
@@ -158,7 +158,7 @@
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:green;"></i>
+            <i class="fas fa-play" style="color:#169E53;"></i>
         </div>
         <div class="col">
             14. Ibrahim (Abraham)
@@ -167,7 +167,7 @@
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:green;"></i>
+            <i class="fas fa-play" style="color:#169E53;"></i>
         </div>
         <div class="col">
             15.  Al-Hijr (The Rockry Tract)
@@ -176,7 +176,7 @@
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:green;"></i>
+            <i class="fas fa-play" style="color:#169E53;"></i>
         </div>
         <div class="col">
             16. An-Nahl (The Bee)
@@ -185,7 +185,7 @@
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:green;"></i>
+            <i class="fas fa-play" style="color:#169E53;"></i>
         </div>
         <div class="col">
             17. Al-Isra (The Night Journey)
@@ -194,7 +194,7 @@
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:green;"></i>
+            <i class="fas fa-play" style="color:#169E53;"></i>
         </div>
         <div class="col">
             18. Al-Kafh (The Cave)
@@ -203,19 +203,17 @@
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:green;"></i>
+            <i class="fas fa-play" style="color:#169E53;"></i>
         </div>
         <div class="col">
             19. Mary (Maryam)
         </div>
     </div>
     <br><br>
-    <b style="color: black">Abdallah Kamel</b>
-    <p>Sheikh Abdallah Kamel is the Imam and Khateeb of Masjid Anani in Jeddah, Saudi Arabia</p>
-    <p>During his learning of the Holy Quran, the esteemed Shaykh has had the privilege of being in the company of and attaining knowledge from other well-known Shuyookh such as Shaykh Muhammad Ibn Abdu Rahim Achichin, Sheikh Ali Jaber and Sheikh Muhammad Yusuf.</p>
-    <p>He completed his specialisation in Islamic Studies at King Abdulaziz University and sought education at the behest of the best scholars and sheikhs such as Shaykh Al-allamah Abdullah Bin Bayyah, Sheikh Khaldoun Al-Ahdab and Sheikh Ali Jaber to name a few.</p>
-    <p>Owing to the emotional and soul warming rendition of the Book of Allah, Sheikh Hani Ar-Rifai was elected as a  special reciter of the Holy Quran in the Royal Court by the Saudi Ministry of Culture and Information.</p>
-    <p>He was granted the coveted designation as the Director of the legal affairs of King Faysal’s Hospital and the Research Center in Jeddah.</p>
-
+    <b style="color: #2F2F2F;">About Abdallah Kamel</b>
+    <p style="color: #2F2F2F;">Sheikh Abdallah Kamel is a living example of this hadith. Blind since birth (1985), Sheikh Abdallah did not let physical disabilities determine his life. Instead, he took over and memorized the entire Koran using the Louis Braille system.</p>
+    <p style="color: #2F2F2F;">The Shaykh's melodious and sincere recitation of the Koran will move your heart and will make you cry. Its enchanting recitations attract large crowds who gather to offer prayers in serenity and khushoo.</p>
+    <p style="color: #2F2F2F;">He completed his specialisation in Islamic Studies at King Abdulaziz University and sought education at the behest of the best scholars and sheikhs such as Shaykh Al-allamah Abdullah Bin Bayyah, Sheikh Khaldoun Al-Ahdab and Sheikh Ali Jaber to name a few.</p>
+    <p style="color: #2F2F2F;">Sheikh Abdallah Kamel is a very respected person in Egypt. He graduated from the University of Al Fayoum in 2005 and later joined the Dar Al Uloom faculty at the same University. He was also appointed to lead the Tarawih prayers at the Badr Al Islami mosque. While there, he will take weekly classes as well. His work as a speaker also continues at a mosque in Al Kiman.</p>
 </section>
 @endsection

@@ -110,16 +110,16 @@
 
             <div class="card card-light">
               <div class="card container m-auto">
-                <div><h2 style="color: black;">Log in to <b style="color: green;">Tartil.me</b> </h2></div>
-                <div><p style="color: black;">Don't have account ?  <a href="{{ route('register') }}" style="color: green;">Sign Up</a></p></div>
+                <div><h2 style="color: #000000;">Log in to <b style="color: green;">Tartil.me</b> </h2></div>
+                <div><p style="color: #000000;">Don't have account ?  <a href="{{ route('register') }}" style="color: green;">Sign Up</a></p></div>
               </div>
 
               <div class="card-body">
                 <form method="POST" action="{{ route('login') }}" class="needs-validation" novalidate="">
                   @csrf
                   <div class="form-group">
-                    <label for="username">Email</label>
-                    <input id="username" type="text" name="username" class="form-control @error('username') is-invalid @enderror" tabindex="1" value="{{ old('username') }}" required autocomplete="email" autofocus>
+                    <label for="username" style="color: #646464;">Email</label>
+                    <input id="username" style="background: #F6F6F6;" type="text" name="username" class="form-control @error('username') is-invalid @enderror" tabindex="1" value="{{ old('username') }}" required autocomplete="email" autofocus placeholder="emailname@mail.com">
                     @error('username')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -128,8 +128,8 @@
                   </div>
 
                   <div class="form-group">
-                    <label for="password" class="control-label">Password</label>
-                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" tabindex="2" required autocomplete="current-password">
+                    <label for="password" class="control-label" style="color: #646464;">Password</label>
+                    <input id="password" style="background: #F6F6F6; type="password" class="form-control @error('password') is-invalid @enderror" name="password" tabindex="2" required autocomplete="current-password" placeholder="yourpassword">
                     @error('password')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -138,7 +138,7 @@
 
                     <div class="float-left">
                       @if (Route::has('password.request'))
-                        <a class="text-small" href="{{ route('password.request') }}">
+                        <a style="color: #577CFF;" class="text-small" href="{{ route('password.request') }}">
                             {{ __('Forgot Your Password?') }}
                         </a>
                       @endif
@@ -154,14 +154,14 @@
 
                   <div class="form-group row">
                     <div class="col">
-                      <button type="submit" class="btn btn-success btn-lg btn-block" tabindex="2">
+                      <button type="submit" class="btn btn-success btn-lg btn-block" style="background: #169E53;" tabindex="2">
                         {{ __('Login') }}
                       </button>
                     </div>
                     <div class="col">
-                      <button type="submit" class="btn btn-light btn-lg btn-block" tabindex="2">
+                      <a href="{{ route('google.login') }}" type="submit" class="btn btn-light btn-lg btn-block" style="background: #FFFFFF;" tabindex="2">
                         <i class="fab fa-google"></i>
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </form>
