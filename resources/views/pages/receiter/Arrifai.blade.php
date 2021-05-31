@@ -39,173 +39,172 @@
     <p class="card-text"><small class="text-muted">Nama Surat</small></p>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:#169E53;"></i>
+            <a href=""><a href=""><i class="fas fa-play" style="color:#169E53;"></i></a></a>
         </div>
         <div class="col">
-            1. Al-Fatihah (The Opener)
-        </div>
-        
-    </div>
-    <br>
-    <div class="row col">
-        <div class=" col-0">
-            <i class="fas fa-play" style="color:#169E53;"></i>
-        </div>
-        <div class="col">
-            2. Al-Baqarah (The Cow)
+            <a href="" style="color: #2F2F2F;">1. Al-Fatihah (The Opener)</a>
         </div>
     </div>
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:#169E53;"></i>
+            <a href=""><i class="fas fa-play" style="color:#169E53;"></i></a>
         </div>
         <div class="col">
-            3. Ali-Imran (Family  of Imran)
+            <a href="" style="color: #2F2F2F;">2. Al-Baqarah (The Cow)</a>
         </div>
     </div>
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:#169E53;"></i>
+            <a href=""><i class="fas fa-play" style="color:#169E53;"></i></a>
         </div>
         <div class="col">
-            4. An-Nisa (The Women)
+            <a href="" style="color: #2F2F2F;">3. Ali-Imran (Family  of Imran)</a>
         </div>
     </div>
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:#169E53;"></i>
+            <a href=""><i class="fas fa-play" style="color:#169E53;"></i></a>
         </div>
         <div class="col">
-            5. Al-Maidah (The Table Spread)
+            <a href="" style="color: #2F2F2F;">4. An-Nisa (The Women)</a>
         </div>
     </div>
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:#169E53;"></i>
+            <a href=""><i class="fas fa-play" style="color:#169E53;"></i></a>
         </div>
         <div class="col">
-            6. Al-An’am (The Cattle)
+            <a href="" style="color: #2F2F2F;">5. Al-Maidah (The Table Spread)</a>
         </div>
     </div>
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:#169E53;"></i>
+            <a href=""><i class="fas fa-play" style="color:#169E53;"></i></a>
         </div>
         <div class="col">
-            7. Al-A’raf (The Heights)
+            <a href="" style="color: #2F2F2F;">6. Al-An’am (The Cattle)</a>
         </div>
     </div>
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:#169E53;"></i>
+            <a href=""><i class="fas fa-play" style="color:#169E53;"></i></a>
         </div>
         <div class="col">
-            8. Al-Anfal (The Spoils of War)
+            <a href="" style="color: #2F2F2F;">7. Al-A’raf (The Heights)</a>
         </div>
     </div>
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:#169E53;"></i>
+            <a href=""><i class="fas fa-play" style="color:#169E53;"></i></a>
         </div>
         <div class="col">
-            9. At-Tawbah (The Repetance)
+            <a href="" style="color: #2F2F2F;">8. Al-Anfal (The Spoils of War)</a>
         </div>
     </div>
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:#169E53;"></i>
+            <a href=""><i class="fas fa-play" style="color:#169E53;"></i></a>
         </div>
         <div class="col">
-            10. Yunus (Yonah)
+            <a href="" style="color: #2F2F2F;">9. At-Tawbah (The Repetance)</a>
         </div>
     </div>
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:#169E53;"></i>
+            <a href=""><i class="fas fa-play" style="color:#169E53;"></i></a>
         </div>
         <div class="col">
-            11. Hud (Hud)
+            <a href="" style="color: #2F2F2F;">10. Yunus (Yonah)</a>
         </div>
     </div>
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:#169E53;"></i>
+            <a href=""><i class="fas fa-play" style="color:#169E53;"></i></a>
         </div>
         <div class="col">
-            12. Yusuf (Joseph)
+            <a href="" style="color: #2F2F2F;">11. Hud (Hud)</a>
         </div>
     </div>
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:#169E53;"></i>
+            <a href=""><i class="fas fa-play" style="color:#169E53;"></i></a>
         </div>
         <div class="col">
-            13. Ar-Rad (The Thunder)
+            <a href="" style="color: #2F2F2F;">12. Yusuf (Joseph)</a>
         </div>
     </div>
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:#169E53;"></i>
+            <a href=""><i class="fas fa-play" style="color:#169E53;"></i></a>
         </div>
         <div class="col">
-            14. Ibrahim (Abraham)
+            <a href="" style="color: #2F2F2F;">13. Ar-Rad (The Thunder)</a>
         </div>
     </div>
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:#169E53;"></i>
+            <a href=""><i class="fas fa-play" style="color:#169E53;"></i></a>
         </div>
         <div class="col">
-            15.  Al-Hijr (The Rockry Tract)
+            <a href="" style="color: #2F2F2F;">14. Ibrahim (Abraham)</a>
         </div>
     </div>
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:#169E53;"></i>
+            <a href=""><i class="fas fa-play" style="color:#169E53;"></i></a>
         </div>
         <div class="col">
-            16. An-Nahl (The Bee)
+            <a href="" style="color: #2F2F2F;">15.  Al-Hijr (The Rockry Tract)</a>
         </div>
     </div>
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:#169E53;"></i>
+            <a href=""><i class="fas fa-play" style="color:#169E53;"></i></a>
         </div>
         <div class="col">
-            17. Al-Isra (The Night Journey)
+            <a href="" style="color: #2F2F2F;">16. An-Nahl (The Bee)</a>
         </div>
     </div>
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:#169E53;"></i>
+            <a href=""><i class="fas fa-play" style="color:#169E53;"></i></a>
         </div>
         <div class="col">
-            18. Al-Kafh (The Cave)
+            <a href="" style="color: #2F2F2F;">17. Al-Isra (The Night Journey)</a>
         </div>
     </div>
     <br>
     <div class="row col">
         <div class=" col-0">
-            <i class="fas fa-play" style="color:#169E53;"></i>
+            <a href=""><i class="fas fa-play" style="color:#169E53;"></i></a>
         </div>
         <div class="col">
-            19. Mary (Maryam)
+            <a href="" style="color: #2F2F2F;">18. Al-Kafh (The Cave)</a>
+        </div>
+    </div>
+    <br>
+    <div class="row col">
+        <div class=" col-0">
+            <a href=""><i class="fas fa-play" style="color:#169E53;"></i></a>
+        </div>
+        <div class="col">
+            <a href="" style="color: #2F2F2F;">19. Mary (Maryam)</a>
         </div>
     </div>
     <br><br>
