@@ -129,7 +129,7 @@
 
                   <div class="form-group">
                     <label for="password" class="control-label" style="color: #646464;">Password</label>
-                    <input id="password" style="background: #F6F6F6; type="password" class="form-control @error('password') is-invalid @enderror" name="password" tabindex="2" required autocomplete="current-password" placeholder="yourpassword">
+                    <input id="password" type="password" style="background: #F6F6F6; type="password" class="form-control @error('password') is-invalid @enderror" name="password" tabindex="2" required autocomplete="current-password" placeholder="yourpassword">
                     @error('password')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>

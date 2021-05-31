@@ -42,6 +42,21 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('Basit', [NamaqoriController::class, 'Basit'])->name('pages.receiter.Basit');
     Route::get('Obeikan', [NamaqoriController::class, 'Obeikan'])->name('pages.receiter.Obeikan');
     Route::get('Albudair', [NamaqoriController::class, 'Albudair'])->name('pages.receiter.Albudair');
+    Route::get('Alqasim', [NamaqoriController::class, 'Alqasim'])->name('pages.receiter.Alqasim');
+    Route::get('AlYusuf', [NamaqoriController::class, 'AlYusuf'])->name('pages.receiter.AlYusuf');
+    Route::get('Aloosi', [NamaqoriController::class, 'Aloosi'])->name('pages.receiter.Aloosi');
+    Route::get('Haneef', [NamaqoriController::class, 'Haneef'])->name('pages.receiter.Haneef');
+    Route::get('Alarkani', [NamaqoriController::class, 'Alarkani'])->name('pages.receiter.Alarkani');
+    Route::get('Alhadidi', [NamaqoriController::class, 'Alhadidi'])->name('pages.receiter.Alhadidi');
+    Route::get('Arrifai', [NamaqoriController::class, 'Arrifai'])->name('pages.receiter.Arrifai');
+    Route::get('Alburaimi', [NamaqoriController::class, 'Alburaimi'])->name('pages.receiter.Alburaimi');
+    Route::get('Thubaity', [NamaqoriController::class, 'Thubaity'])->name('pages.receiter.Thubaity');
+    Route::get('Sudais', [NamaqoriController::class, 'Sudais'])->name('pages.receiter.Sudais');
+    Route::get('Shatri', [NamaqoriController::class, 'Shatri'])->name('pages.receiter.Shatri');
+    Route::get('Alajmi', [NamaqoriController::class, 'Alajmi'])->name('pages.receiter.Alajmi');
+    Route::get('Jibreen', [NamaqoriController::class, 'Jibreen'])->name('pages.receiter.Jibreen');
+    Route::get('Dossari', [NamaqoriController::class, 'Dossari'])->name('pages.receiter.Dossari');
+    Route::get('Ghamdi', [NamaqoriController::class, 'Ghamdi'])->name('pages.receiter.Ghamdi');
 });
 
 Route::get('auth/google', [\App\Http\Controllers\GoogleController::class,'redirectToGoogle'])->name('google.login');

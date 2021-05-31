@@ -47,68 +47,78 @@ class NamaqoriController extends Controller
         return view('pages.receiter.Albudair');
     }
 
-    // public function play()
-    // {
-    //     return view('pages.receiter.play');
-    // }
+    public function Alqasim()
+    {
+        return view('pages.receiter.Alqasim');
+    }
 
-    // public function play()
-    // {
-    //     return view('pages.receiter.play');
-    // }
+    public function AlYusuf()
+    {
+        return view('pages.receiter.AlYusuf');
+    }
 
-    // public function play()
-    // {
-    //     return view('pages.receiter.play');
-    // }
+    public function Aloosi()
+    {
+        return view('pages.receiter.Aloosi');
+    }
 
-    // public function play()
-    // {
-    //     return view('pages.receiter.play');
-    // }
+    public function Haneef()
+    {
+        return view('pages.receiter.Haneef');
+    }
 
-    // public function play()
-    // {
-    //     return view('pages.receiter.play');
-    // }
+    public function Alarkani()
+    {
+        return view('pages.receiter.Alarkani');
+    }
 
-    // public function play()
-    // {
-    //     return view('pages.receiter.play');
-    // }
+    public function Alhadidi()
+    {
+        return view('pages.receiter.Alhadidi');
+    }
 
-    // public function play()
-    // {
-    //     return view('pages.receiter.play');
-    // }
+    public function Arrifai()
+    {
+        return view('pages.receiter.Arrifai');
+    }
 
-    // public function play()
-    // {
-    //     return view('pages.receiter.play');
-    // }
+    public function Alburaimi()
+    {
+        return view('pages.receiter.Alburaimi');
+    }
 
-    // public function play()
-    // {
-    //     return view('pages.receiter.play');
-    // }
+    public function Thubaity()
+    {
+        return view('pages.receiter.Thubaity');
+    }
 
-    // public function play()
-    // {
-    //     return view('pages.receiter.play');
-    // }
+    public function Sudais()
+    {
+        return view('pages.receiter.Sudais');
+    }
 
-    // public function play()
-    // {
-    //     return view('pages.receiter.play');
-    // }
+    public function Shatri()
+    {
+        return view('pages.receiter.Shatri');
+    }
 
-    // public function play()
-    // {
-    //     return view('pages.receiter.play');
-    // }
+    public function Alajmi()
+    {
+        return view('pages.receiter.Alajmi');
+    }
 
-    // public function play()
-    // {
-    //     return view('pages.receiter.play');
-    // }
+    public function Jibreen()
+    {
+        return view('pages.receiter.Jibreen');
+    }
+
+    public function Dossari()
+    {
+        return view('pages.receiter.Dossari');
+    }
+
+    public function Ghamdi()
+    {
+        return view('pages.receiter.Ghamdi');
+    }
 }

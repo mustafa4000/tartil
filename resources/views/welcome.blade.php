@@ -116,6 +116,7 @@
           @endif
         </ul>
       </nav>
+       
       <div class="main-sidebar" style="background: #169E53;">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
@@ -264,10 +265,10 @@
                     </div>
                   </div>
                   <div class="card">
-                    <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/salah_abudair.jpeg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
+                    <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/Abdullah_al_buraimi.jpeg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
                     <div class="card-body">
                       <div class="card-title">
-                        <a href="" style="font-size: 14px; color:#2F2F2F; text-align: center;">Salah Albudair</a>
+                        <a href="" style="font-size: 14px; color:#2F2F2F; text-align: center;">Abdullah Al Buraimi</a>
                       </div>
                     </div>
                   </div>

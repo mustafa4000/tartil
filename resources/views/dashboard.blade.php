@@ -348,15 +348,15 @@
                     <img class="card-img-top"  class="img-rounded" src="{{ url('/assets/imgtartil/abdul_muhsin.jpg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
                     <div class="card-body">
                       <div class="mr-1">
-                        <a href="" style="font-size: 14px; color:#2F2F2F;">Abdul Muhsin Al Qasim</a>
+                        <a href="{{ route('pages.receiter.Alqasim') }}" style="font-size: 14px; color:#2F2F2F;">Abdul Muhsin Al Qasim</a>
                       </div>
                     </div>
                   </div>
                   <div class="card">
-                    <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/abdul _rahman.jpeg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
+                    <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/abdul_rahman.jpeg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
                     <div class="card-body">
                       <div class="card-title">
-                        <a href="" style="font-size: 14px; color:#2F2F2F; text-align: center;">Abdul Rahman Al Yusuf</a>
+                        <a href="{{ route('pages.receiter.AlYusuf') }}" style="font-size: 14px; color:#2F2F2F; text-align: center;">Abdul Rahman Al Yusuf</a>
                       </div>
                     </div>
                   </div>
@@ -364,7 +364,7 @@
                     <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/abdulraman.jpg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
                     <div class="card-body">
                       <div class="card-title">
-                        <a href="" style="font-size: 14px; color:#2F2F2F; text-align: center;">Abdul Rahman Jamal Aloosi</a>
+                        <a href="{{ route('pages.receiter.Aloosi') }}" style="font-size: 14px; color:#2F2F2F; text-align: center;">Abdul Rahman Jamal Aloosi</a>
                       </div>
                     </div>
                   </div>
@@ -372,7 +372,7 @@
                     <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/abdulhaneef.jpg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
                     <div class="card-body">
                       <div class="card-title">
-                        <a href="" style="font-size: 14px; color:#2F2F2F; text-align: center;">Abdul Wadood Haneef</a>
+                        <a href="{{ route('pages.receiter.Haneef') }}" style="font-size: 14px; color:#2F2F2F; text-align: center;">Abdul Wadood Haneef</a>
                       </div>
                     </div>
                   </div>
@@ -380,7 +380,7 @@
                     <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/abdulwali.jpeg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
                     <div class="card-body">
                       <div class="card-title">
-                        <a href="" style="font-size: 14px; color:#2F2F2F; text-align: center;">Abdul Wali Al Arkani</a>
+                        <a href="{{ route('pages.receiter.Alarkani') }}" style="font-size: 14px; color:#2F2F2F; text-align: center;">Abdul Wali Al Arkani</a>
                       </div>
                     </div>
                   </div>
@@ -388,15 +388,15 @@
                     <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/abdulkabir.jpg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
                     <div class="card-body">
                       <div class="card-title">
-                        <a href="" style="font-size: 14px; color:#2F2F2F; text-align: center;">Abdulkabir Al Hadidi</a>
+                        <a href="{{ route('pages.receiter.Alhadidi') }}" style="font-size: 14px; color:#2F2F2F; text-align: center;">Abdulkabir Al Hadidi</a>
                       </div>
                     </div>
                   </div>
                   <div class="card">
-                    <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/salah_abudair.jpeg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
+                    <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/Abdullah_al_buraimi.jpeg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
                     <div class="card-body">
                       <div class="card-title">
-                        <a href="" style="font-size: 14px; color:#2F2F2F; text-align: center;">Salah Albudair</a>
+                        <a href="{{ route('pages.receiter.Alburaimi') }}" style="font-size: 14px; color:#2F2F2F; text-align: center;">Abdullah Al Buraimi</a>
                       </div>
                     </div>
                   </div>
