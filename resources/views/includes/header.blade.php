@@ -6,7 +6,7 @@
       <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
     </ul>
     <div class="search-element" style="background: #F6F6F6; border-radius: 8px;">
-      <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="250" width="576px" height="40px">
+      <input class="form-control" type="search" placeholder="Search Surah, or Reciter" aria-label="Search" data-width="250" width="576px" height="40px">
       <button class="btn" type="submit"><i class="fas fa-search"></i></button>
       <div class="search-backdrop"></div>
       <div class="search-result">
@@ -195,7 +195,8 @@
           </div>
       </li>
       <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-          <img alt="image" src="../assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+          {{-- <img alt="image" src="../assets/img/avatar/avatar-1.png" class="rounded-circle mr-1"> --}}
+          <figure class="avatar mr-2 avatar-sm bg-success text-white" data-initial="UM"></figure>
           <div class="d-sm-none d-lg-inline-block">Hi, Ujang Maman</div></a>
           <div class="dropdown-menu dropdown-menu-right">
               <div class="dropdown-title">Logged in 5 min ago</div> 

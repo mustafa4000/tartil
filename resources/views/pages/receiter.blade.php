@@ -6,7 +6,7 @@
       <div class="section-body">
         <h4 style="color: #2F2F2F;">Receiter</h4>
           <div class="row">
-            <div class="col-1">
+            <div class="col">
               <a href=""> <p style="text-align: start; color:#169E53; font-size: 16px;">All</p> </a>
             </div>
             <div class="col-2">
@@ -16,8 +16,16 @@
               <a href="" style="color:#DCDCDC; font-size: 16px;"> Non Hafs A'n Assem </a>
             </div>
             <div class="col">
-              
-              <a href="" style="color: #169E53;"><i class="far fa-filter"></i> Most Popular </a>
+              <div class="btn-group dropleft">
+                <a type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="far fa-filter" style="color: #169E53;">Most Popular</i>  
+                </a>
+                <div class="dropdown-menu dropleft" x-placement="left-start" style="position: absolute; transform: translate3d(-202px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
+                  <a class="dropdown-item" href="#">From A-Z</a>
+                  <a class="dropdown-item" href="#">From Z-A</a>
+                  <a class="dropdown-item" href="#">Most Popular</a>
+                </div>
+              </div>
             </div>
           </div>        
           <div>
@@ -125,7 +133,7 @@
                 </div>
               </div>
               <div class="card">
-                <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/Abdur Rahman As-Sudais.jpg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
+                <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/ssudais.jpeg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
                 <div class="card-body">
                   <a href="{{ route('pages.receiter.Sudais') }}" class="card-title" style="font-size: 14px; color:#2F2F2F; text-align: center;">Abdur Rahman As-Sudais</a>
                 </div>

@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">z
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
@@ -167,7 +167,7 @@
 
                         <div class="form-group">
                             <label for="password" class="d-block" style="color: #646464;">{{ __('Password') }}</label>
-                            <input id="password" style="background: #F6F6F6; type="password" class="form-control pwstrength @error('password') is-invalid @enderror" data-indicator="pwindicator" name="password" required autocomplete="new-password" placeholder="8 minimum characters">
+                            <input id="password" type="password" style="background: #F6F6F6; type="password" class="form-control pwstrength @error('password') is-invalid @enderror" data-indicator="pwindicator" name="password" required autocomplete="new-password" placeholder="8 minimum characters">
                             @error('password')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -181,7 +181,7 @@
 
                         <div class="form-group">
                             <label for="password-confirm" style="color: #646464;">{{ __('Confirm Password') }}</label>
-                            <input id="password-confirm" style="background: #F6F6F6; type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="8 minimum characters">
+                            <input id="password-confirm" type="password" style="background: #F6F6F6; type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="8 minimum characters">
                         </div>
 
                         {{-- <div class="form-group">
@@ -199,7 +199,7 @@
                             </div>
                             <div class="col">
                                 <button type="submit" class="btn btn-light btn-lg btn-block" style="background: #FFFFFF;">
-                                    <i class="fab fa-google"></i>
+                                  <img src="{{ url('/assets/imgtartil/google.jpg') }}" alt="" width="25px">
                                 </button>
                             </div>
                         </div>

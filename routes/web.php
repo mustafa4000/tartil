@@ -33,6 +33,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('favorite', [InfoController::class, 'favorite'])->name('pages.favorite');
     Route::get('alquran', [InfoController::class, 'alquran'])->name('pages.alquran');
     Route::get('playlist', [InfoController::class, 'playlist'])->name('pages.playlist');
+    Route::get('tambahan', [InfoController::class, 'tambahan'])->name('pages.tambahan');
     Route::get('receiter', [InfoController::class, 'receiter'])->name('pages.receiter');
 
     Route::get('play', [NamaqoriController::class, 'play'])->name('pages.receiter.play');
@@ -59,5 +60,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('Ghamdi', [NamaqoriController::class, 'Ghamdi'])->name('pages.receiter.Ghamdi');
 });
 
-Route::get('auth/google', [\App\Http\Controllers\GoogleController::class,'redirectToGoogle'])->name('google.login');
-Route::get('auth/google/callback', [\App\Http\Controllers\GoogleController::class,'handleGoogleCallback'])->name('google.callback');
+Route::get('auth/google', [\App\Http\Controllers\GoogleController::class, 'redirectToGoogle'])->name('google.login');
+Route::get('auth/google/callback', [\App\Http\Controllers\GoogleController::class, 'handleGoogleCallback'])->name('google.callback');
+
+Route::view("vue", "vue");

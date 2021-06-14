@@ -19,14 +19,15 @@
         <li class="nav-item dropdown">
           <a href="{{ route('pages.alquran') }}"><i class="fas fa-book-open fa-2x" style="color:#5CBB87;"></i><span style="color:#5CBB87; font-size: 16px;">Alquran</span></a>
         </li>
-        <li class="nav-item dropdown">
-          <a href="#" class="nav-link has-dropdown"><i class="fas fa-align-justify fa-2x" style="color:#5CBB87;"></i> <span style="color:#5CBB87; font-size: 16px;">Playlist</span></a>
-          <ul class="dropdown-menu active">
-            <li><a class="nav-link" href="bootstrap-alert.html">Playlist 1 </a></li>
-            <li><a class="nav-link" href="bootstrap-badge.html">For Today</a></li>
-            <li><a class="nav-link" href="bootstrap-breadcrumb.html">NIight</a></li>
-            <li><a class="nav-link" href="bootstrap-buttons.html">Buttons</a></li>
-            <li><a class="nav-link" href="bootstrap-card.html">Card</a></li>
+        <li class="dropdown">
+          <a href="{{ route('pages.tambahan') }}" class="nav-link" data-toggle="dropdown"><i class="fas fa-align-justify fa-2x" style="color:#5CBB87;"></i> <span style="color:#5CBB87; font-size: 16px;">Playlist</span> <i class="far fa-plus-circle fa-2x" style="color: white;"> </i> </a>
+          <ul class="dropdown-menu" style="display: none;">
+            <hr style="background: white">
+            <li><a class="nav-link" style="color:#5CBB87; font-size: 16px;" href="{{ route('pages.playlist') }}">Playlist 1 </a></li>
+            <li><a class="nav-link" style="color:#5CBB87; font-size: 16px;" href="bootstrap-badge.html">For Today</a></li>
+            <li><a class="nav-link" style="color:#5CBB87; font-size: 16px;" href="bootstrap-breadcrumb.html">NIight</a></li>
+            <li><a class="nav-link" style="color:#5CBB87; font-size: 16px;" href="bootstrap-buttons.html">Buttons</a></li>
+            <li><a class="nav-link" style="color:#5CBB87; font-size: 16px;" href="bootstrap-card.html">Card</a></li>
           </ul>
         </li>
       </ul>

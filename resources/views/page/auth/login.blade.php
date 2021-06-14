@@ -160,7 +160,7 @@
                     </div>
                     <div class="col">
                       <a href="{{ route('google.login') }}" type="submit" class="btn btn-light btn-lg btn-block" style="background: #FFFFFF;" tabindex="2">
-                        <i class="fab fa-google"></i>
+                        <img src="{{ url('/assets/imgtartil/google.jpg') }}" alt="" width="25px">
                       </a>
                     </div>
                   </div>

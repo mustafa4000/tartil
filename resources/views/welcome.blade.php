@@ -29,7 +29,7 @@
             <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
           </ul>
           <div class="search-element">
-            <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="250" width="576px" height="40px" style="background:#F7F7F7; border-radius: 8px; top:32px; left: 304px;">
+            <input class="form-control" type="search" placeholder="Search Surah, or Reciter" aria-label="Search" data-width="250" width="576px" height="40px" style="background:#F7F7F7; border-radius: 8px; top:32px; left: 304px;">
             <button class="btn" type="submit"><i class="fas fa-search"></i></button>
             <div class="search-backdrop"></div>
             <div class="search-result">
@@ -174,9 +174,10 @@
                   <td><a href="" style="font-size: 16px; color:#2F2F2F">Al-Fatiha( The Opener )</a></td>
                   <td> <a href="" style="font-size: 16px; color:#2F2F2F">Abdallah Kamel</a></td>
                   <td> <a href="" style="font-size: 16px; color:#2F2F2F">Hafs A'n Assem</a></td>
-                  <td>
-                    <a href="" style="color: #2F2F2F;"><i class="fas fa-align-justify"></i></a>   
-                    <a href="" style="color: #2F2F2F;"><i class="far fa-star"></i></a>
+                  <td class="row">
+                    <a href="" class="col" style="color: #2F2F2F;"><i class="fas fa-align-justify"></i></a>   
+                    <a href="" class="col" style="color: #2F2F2F;"><i class="far fa-star"></i></a>
+                    <a href="" class="col" style="color: #2F2F2F;"><i class="far fa-ellipsis-h"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -184,9 +185,10 @@
                   <td><a href="" style="font-size: 16px; color:#2F2F2F">Al-Maidah( The Table Spread )</a></td>
                   <td><a href="" style="font-size: 16px; color:#2F2F2F">Abdel Aziz Al Ahmed</a></td>
                   <td><a href="" style="font-size: 16px; color:#2F2F2F">Hafs A'n Assem</a></td>
-                  <td>
-                    <a href="" style="color: #2F2F2F;"><i class="fas fa-align-justify"></i></a>   
-                    <a href="" style="color: #2F2F2F;"><i class="far fa-star"></i></a>
+                  <td class="row">
+                    <a href="" class="col" style="color: #2F2F2F;"><i class="fas fa-align-justify"></i></a>   
+                    <a href="" class="col" style="color: #2F2F2F;"><i class="far fa-star"></i></a>
+                    <a href="" class="col" style="color: #2F2F2F;"><i class="far fa-ellipsis-h"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -194,9 +196,10 @@
                   <td><a href="" style="font-size: 16px; color:#2F2F2F">Al-Kahf( The Cave )</a></td>
                   <td><a href="" style="font-size: 16px; color:#2F2F2F">Jamal Shaker Abdullah</a></td>
                   <td><a href="" style="font-size: 16px; color:#2F2F2F">Hafs A'n Assem</a></td>
-                  <td>
-                    <a href="" style="color: #2F2F2F;"><i class="fas fa-align-justify"></i></a>   
-                    <a href="" style="color: #2F2F2F;"><i class="far fa-star"></i></a>
+                  <td class="row">
+                    <a href="" class="col" style="color: #2F2F2F;"><i class="fas fa-align-justify"></i></a>   
+                    <a href="" class="col" style="color: #2F2F2F;"><i class="far fa-star"></i></a>
+                    <a href="" class="col" style="color: #2F2F2F;"><i class="far fa-ellipsis-h"></i></a>
                   </td>
                 </tr>
                 <tr>
@@ -204,9 +207,10 @@
                   <td><a href="" style="font-size: 16px; color:#2F2F2F">Al-Rahman( The Beneficent )</a></td>
                   <td><a href="" style="font-size: 16px; color:#2F2F2F">Mohammad Saleh Alim Shah</a></td>
                   <td><a href="" style="font-size: 16px; color:#2F2F2F">Hafs A'n Assem</a></td>
-                  <td>
-                    <a href="" style="color: #2F2F2F;"><i class="fas fa-align-justify"></i></a>   
-                    <a href="" style="color: #2F2F2F;"><i class="far fa-star"></i></a>
+                  <td class="row">
+                    <a href="" class="col" style="color: #2F2F2F;"><i class="fas fa-align-justify"></i></a>   
+                    <a href="" class="col" style="color: #2F2F2F;"><i class="far fa-star"></i></a>
+                    <a href="" class="col" style="color: #2F2F2F;"><i class="far fa-ellipsis-h"></i></a>
                   </td>
                 </tr>
               </tbody>
@@ -220,12 +224,12 @@
                     <img class="card-img-top"  class="img-rounded" src="{{ url('/assets/imgtartil/abdul_muhsin.jpg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
                     <div class="card-body">
                       <div class="mr-1">
-                        <a href="" style="font-size: 14px; color:#2F2F2F;">Abdul Muhsin Al Qasim</a>
+                        <a href="" style="font-size: 14px; color:#2F2F2F;"><p class="">Abdul Muhsin Al Qasim</p> </a>
                       </div>
                     </div>
                   </div>
                   <div class="card">
-                    <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/abdul _rahman.jpeg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
+                    <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/abdul_rahman.jpeg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
                     <div class="card-body">
                       <div class="card-title">
                         <a href="" style="font-size: 14px; color:#2F2F2F; text-align: center;">Abdul Rahman Al Yusuf</a>

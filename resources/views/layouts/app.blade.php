@@ -15,7 +15,8 @@
 <body>
   <div id="app">
     <div class="main-wrapper">
-      <div class="navbar-bg"></div>
+
+      @include('sweetalert::alert')
       {{-- header / navbar --}}
       @include('includes.header')
       {{-- sidebar --}}
@@ -26,10 +27,12 @@
         @yield('content')
       </div>
 
-      {{-- footer --}}
+{{-- /      footer --}}
       @include('includes.footer')
     </div>
   </div>
+
+  @stack('before-script')
 
   <!-- General JS Scripts -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -46,5 +49,7 @@
   <script src="{{ asset('/assets/js/custom.js') }}"></script>
 
   <!-- Page Specific JS File -->
+
+  @stack('after-script')
 </body>
 </html>

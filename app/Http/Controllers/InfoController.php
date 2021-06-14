@@ -41,11 +41,13 @@ class InfoController extends Controller
         return view('pages.playlist');
     }
 
+    public function tambahan()
+    {
+        return view('pages.tambahan');
+    }
+
     public function receiter()
     {
         return view('pages.receiter');
     }
-
-
-
 }

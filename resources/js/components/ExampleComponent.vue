@@ -6,7 +6,11 @@
                     <div class="card-header">Example Component</div>
 
                     <div class="card-body">
-                        I'm an example component.
+                        <ul>
+                            <!-- <li v-for="(playing, index) in top_playing" :index="index"> -->
+                                {{ playing.surah }}
+                            <!-- </li> -->
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -16,6 +20,20 @@
 
 <script>
     export default {
+        data() {
+            return {
+                "top_playing" : [
+                    {
+                        "surah" : "Al-fatihah",
+                        "reciter" : "Abdullah"
+                    },
+                    {
+                        "surah" : "Baqarah",
+                        "reciter" : "Abdullah"
+                    }
+                ],
+            }
+        },
         mounted() {
             console.log('Component mounted.')
         }
