@@ -3,5 +3,5 @@
 @section('title','Alquran')
 
 @section('content')
-
+    
 @endsection

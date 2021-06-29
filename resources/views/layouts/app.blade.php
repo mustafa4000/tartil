@@ -15,15 +15,17 @@
 <body>
   <div id="app">
     <div class="main-wrapper">
-
+      <div class="navbar-bg"></div>
       @include('sweetalert::alert')
       {{-- header / navbar --}}
       @include('includes.header')
-      {{-- sidebar --}}
-      @include('includes.sidebar')
+      <div class="main-sidebar" style="background: #169E53;">
+        {{-- sidebar --}}
+        @include('includes.sidebar')
+      </div>
 
       <!-- Main Content -->
-      <div class="main-content" style="background: white">
+      <div class="main-content" style="background: #fff;">
         @yield('content')
       </div>
 
@@ -43,13 +45,18 @@
   <script src="{{ asset('/assets/js/stisla.js') }}"></script>
 
   <!-- JS Libraies -->
+  <script src="{{ asset('/node_modules/jquery-sparkline/jquery.sparkline.min.js') }}"></script>
+  <script src="{{ asset('/node_modules/chart.js/dist/Chart.min.js') }}"></script>
+  <script src="{{ asset('/node_modules/owl.carousel/dist/owl.carousel.min.js') }}"></script>
+  <script src="{{ asset('/node_modules/summernote/dist/summernote-bs4.js') }}"></script>
+  <script src="{{ asset('/node_modules/chocolat/dist/js/jquery.chocolat.min.js') }}"></script>
 
   <!-- Template JS File -->
   <script src="{{ asset('/assets/js/scripts.js') }}"></script>
   <script src="{{ asset('/assets/js/custom.js') }}"></script>
 
   <!-- Page Specific JS File -->
-
+  <script src="{{ asset('/assets/js/page/index.js') }}"></script>
   @stack('after-script')
 </body>
 </html>

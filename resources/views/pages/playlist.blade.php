@@ -22,7 +22,7 @@
           <th scope="col" style="color: #9D9D9D; background: white;">Sura Name</th>
           <th scope="col" style="color: #9D9D9D; background: white;">Reciter</th>
           <th scope="col" style="color: #9D9D9D; background: white;">Rewayat</th>
-          <th scope="col" style="color: #9D9D9D; background: white;">Duraiton</th>
+          <th scope="col" style="color: #9D9D9D; background: white;">Duration</th>
         </tr>
       </thead>
       <tbody>
