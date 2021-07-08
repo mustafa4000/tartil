@@ -2,45 +2,67 @@
 
 @section('content')
 <section class="section">
-    <div class="section-body">
-        <div class="text-left">
-            <h5 style="color: #2F2F2F">Murotal</h5> 
-        </div>
-        <div class="text-right">
-            <a class="btn btn-success" href="{{ route('murotal.create') }}"> Create Post</a>
-        </div>  
+  <div class="section-body">
+    <div class="row mt-5 mb-5">
+      <div class="col-lg-12 margin-tb">
+          <div class="float-left">
+              <h2>Murotals</h2>
+          </div>
+          <div class="float-right">
+              <a class="btn btn-success" href="{{ route('murotals.create') }}"> Create Post</a>
+          </div>
+      </div>
+    </div>
 
-        <div class="card-deck">
-            @foreach ($murotals as $murotal)
-            <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Path</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>{{ $murotal->name }}</td>
-                    <td>  <iframe src="{{ Storage::url($murotal->path) }}" width="600" height="400"></iframe>  </td>
-                  </tr>
+    <table class="table table-bordered">
+        <tr>
+            <th width="20px" class="text-center">No</th>
+            <th scope="col">Name</th>
+            <th scope="col">File</th>
+            <th width="280px"class="text-center">Action</th>
+        </tr>
+        @forelse ($murotals as $murotal)
+            <tr>
+                <td class="text-center">{{ ++$i }}</td>
+                <td>{{ $murotal->name }}</td>
+                <td>{{ $murotal->file }}</td>
+                <td class="text-center">
                     <form action="{{ route('murotals.destroy',$murotal->id) }}" method="POST">
-    
-                        {{-- <a class="btn btn-primary" href="{{ route('reciters.edit',$reciter->id) }}">Edit</a> --}}
-    
+
+                        <a class="btn btn-info btn-sm" href="{{ route('murotals.show',$murotal->id) }}">Show</a>
+
+                        <a class="btn btn-primary btn-sm" href="{{ route('murotals.edit',$murotal->id) }}">Edit</a>
+
                         @csrf
                         @method('DELETE')
-        
-                        {{-- <button type="submit" class="btn btn-danger">Delete</button> --}}
-                    </form>
-                </tbody>
-              </table>
-            @endforeach
-        </div>
 
-        {{-- {!! $reciters->links() !!} --}}
-    </div>
+                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        @empty
+            <div class="alert alert-danger">
+                Data Blog belum Tersedia.
+            </div>
+        @endforelse
+    </table>
+
+    {{-- {!! $murotals->links() !!} --}}
+  </div>
 </section>
 @endsection
+
+@push('before-script')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+<script>
+  //message with toastr
+    @if(session()->has('success'))  
+        toastr.success('{{ session('success') }}', 'BERHASIL!'); 
+    @elseif(session()->has('error'))
+        toastr.error('{{ session('error') }}', 'GAGAL!'); 
+    @endif
+</script>
+@endpush

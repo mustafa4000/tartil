@@ -11,16 +11,21 @@ class Murotal extends Model
 
     protected $table = "murotals";
     protected $fillable = [
-        'name', 'path'
+        'name', 'file'
     ];
+
+    public function reciter_riwayats()
+    {
+        return $this->hasMany(ReciterRiwayat::class, 'id' , 'murotal_id');
+    }
+
+    public function murotal_reciter_surah()
+    {
+        return $this->hasOne(MRS::class, 'murotal_id' , 'id');
+    }
 
     public function surahs()
     {
-        return $this->belongsToMany(Surah::class);
-    }
-
-    public function reciters()
-    {
-        return $this->belongsToMany(Reciter::class);
+        return $this->hasMany(Surah::class,'surah_id', 'id');
     }
 }

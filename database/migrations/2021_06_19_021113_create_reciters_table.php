@@ -18,7 +18,8 @@ class CreateRecitersTable extends Migration
             $table->string('name');
             $table->string('slug');
             $table->string('image');
-            $table->integer('riwayat_id')->nullable();
+            $table->string('country');
+            $table->text('description');
             $table->timestamps();
         });
     }

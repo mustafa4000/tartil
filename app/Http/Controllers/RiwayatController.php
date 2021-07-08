@@ -14,9 +14,8 @@ class RiwayatController extends Controller
      */
     public function index()
     {
-        $riwayat = Riwayat::latest()->paginate(5);
-
-        return view('riwayats.index',compact('riwayat'))->with('i', (request()->input('page', 1) - 1) * 5);
+        $riwayats = Riwayat::with(['reciter_riwayats'])->paginate(5);
+        return view('riwayats.index',compact('riwayats'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -42,7 +41,6 @@ class RiwayatController extends Controller
         ]);
 
         Riwayat::create($request->all());
-
         return redirect()->route('riwayats.index')->with('success','Post created successfully.');
     }
 
@@ -52,9 +50,9 @@ class RiwayatController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Riwayat $riwayat)
     {
-        //
+        return view('riwayats.show',compact('riwayat'));
     }
 
     /**
@@ -63,9 +61,9 @@ class RiwayatController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Riwayat $id)
+    public function edit(Riwayat $riwayat)
     {
-        //
+        return view('riwayats.edit',compact('riwayat'));
     }
 
     /**
@@ -78,13 +76,10 @@ class RiwayatController extends Controller
     public function update(Request $request, Riwayat $riwayat)
     {
         $request->validate([
-            'surat' => 'required',
-            'nama' => 'required',
-            'rewayat' => 'required',
+            'name' => 'required',
         ]);
 
         $riwayat->update($request->all());
-
         return redirect()->route('riwayats.index')->with('success','Post updated successfully');
     }
 
@@ -94,8 +89,9 @@ class RiwayatController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Riwayat $id)
+    public function destroy(Riwayat $riwayat)
     {
-        //
+        $riwayat->delete();
+        return redirect()->route('riwayats.index')->with('success','Post deleted successfully');
     }
 }

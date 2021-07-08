@@ -15,8 +15,8 @@ class SurahController extends Controller
      */
     public function index()
     {
-        $surahs = Surah::orderBy('no', 'asc')->get();
-
+        $surahs = Surah::with(['reciter_riwayats', 'reciter_riwayats.reciter'])->orderBy('no', 'asc')->get();
+        // dd($surahs);
         return view('surahs.index', compact('surahs'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -48,7 +48,7 @@ class SurahController extends Controller
         // dd($request->all());
         Surah::create($request->all());
 
-        return redirect()->route('surahs.index')->with('success', 'Post created successfully.');
+        return redirect()->route('surahs.index')->with('success', 'Berhasil.');
     }
 
     /**
@@ -97,7 +97,7 @@ class SurahController extends Controller
 
         $surah->update($request->all());
 
-        return redirect()->route('surahs.index')->with('success', 'Post updated successfully');
+        return redirect()->route('surahs.index')->with('success', 'Berhasil.');
     }
 
     /**
@@ -110,6 +110,6 @@ class SurahController extends Controller
     {
         $surah->delete();
 
-        return redirect()->route('surahs.index')->with('success', 'Post deleted successfully');
+        return redirect()->route('surahs.index')->with('success', 'Berhasil di hapus.');
     }
 }

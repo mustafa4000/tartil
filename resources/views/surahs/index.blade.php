@@ -2,8 +2,12 @@
 
 @section('content')
 <section class="section">
-    <h5 style="color: #2F2F2F">All Surah</h5>
-    <a class="btn btn-success" href="{{ route('surahs.create') }}"> Create Post</a>
+    <div class="text-left">
+        <h5 style="color: #2F2F2F">All Surah</h5>
+    </div>
+    <div class="text-right">
+        <a class="btn btn-success" href="{{ route('surahs.create') }}"> Create Post</a>
+    </div>
     <div class="row">
         @foreach ($surahs as $surah)
             <div class="column">

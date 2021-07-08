@@ -46,7 +46,7 @@ class PostController extends Controller
 
         Post::create($request->all());
 
-        return redirect()->route('posts.index')->with('success','Post created successfully.');
+        return redirect()->route('posts.index')->with('success','Berhasil.');
     }
 
     /**
@@ -88,7 +88,7 @@ class PostController extends Controller
 
         $post->update($request->all());
 
-        return redirect()->route('posts.index')->with('success','Post updated successfully');
+        return redirect()->route('posts.index')->with('success','Berhasil.');
     }
 
     /**
@@ -101,13 +101,6 @@ class PostController extends Controller
     {
         $post->delete();
 
-        return redirect()->route('posts.index')->with('success','Post deleted successfully');
-    }
-
-    public function search(Request $request)
-    {
-        $search = $request->get('search');
-        $posts = DB::table('posts')->where('name', '&'.$search.'&')->paginate(5);
-        return view('index', ['posts' => $posts]);
+        return redirect()->route('posts.index')->with('success','Berhasil di hapus.');
     }
 }

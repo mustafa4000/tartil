@@ -53,6 +53,33 @@
             </div>
             @enderror
         </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <label class="font-weight-bold">Country:</label>
+                <input type="text" class="form-control @error('country') is-invalid @enderror" name="country" value="{{ old('country') }}" placeholder="Masukkan country">
+            </div>
+
+            <!-- error message untuk surat -->
+            @error('country')
+            <div class="alert alert-danger mt-2">
+                {{ $message }}
+            </div>
+            @enderror
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <label class="font-weight-bold">Description:</label>
+                {{-- <input type="text" class="form-control @error('description') is-invalid @enderror" name="description" value="{{ old('description') }}" placeholder="Masukkan Description"> --}}
+                <textarea class="form-control @error('description') is-invalid @enderror" style="height:150px" name="description" value="{{ old('description') }}" placeholder="Masukkan Description"></textarea>
+            </div>
+
+            <!-- error message untuk surat -->
+            @error('description')
+            <div class="alert alert-danger mt-2">
+                {{ $message }}
+            </div>
+            @enderror
+        </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
             <button type="submit" class="btn btn-md btn-success">SIMPAN</button>

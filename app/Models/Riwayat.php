@@ -11,11 +11,16 @@ class Riwayat extends Model
 
     protected $table = "riwayats";
     protected $fillable = [
-        'name' 
+        'name'
     ];
 
     public function reciters()
     {
-        return $this->hasMany(Reciter::class,'riwayat_id');
+        return $this->hasMany(Reciter::class,'reciter_id', 'id');
+    }
+
+    public function reciter_riwayats()
+    {   
+        return $this->hasMany(ReciterRiwayat::class, 'riwayat_id' , 'id');
     }
 }

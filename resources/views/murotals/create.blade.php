@@ -7,7 +7,7 @@
             <h2>Create New Post</h2>
         </div>
         <div class="float-right">
-            {{-- <a class="btn btn-secondary" href="{{ route('murotals.index') }}"> Back</a> --}}
+            <a class="btn btn-secondary" href="{{ route('murotals.index') }}"> Back</a>
         </div>
     </div>
 </div>
@@ -23,14 +23,14 @@
     </div>
 @endif
  
-<form action="{{ route('murotal.store') }}" method="POST" enctype="multipart/form-data">
+<form action="{{ route('murotals.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
  
      <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <label class="font-weight-bold">Name:</label>
-                <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" placeholder="Masukkan Name">
+                <strong>Name:</strong>
+                <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" placeholder="Name">
             </div>
 
             <!-- error message untuk surat -->
@@ -42,22 +42,21 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <label class="font-weight-bold">Gambar :</label>
-                <input type="file" class="form-control @error('path') is-invalid @enderror" name="path">
+                <strong>File:</strong>
+                <input type="file" name="file" class="form-control @error('file') is-invalid @enderror" placeholder="File">
             </div>
 
-            <!-- error message untuk icon -->
-            @error('path')
+            <!-- error message untuk surat -->
+            @error('file')
             <div class="alert alert-danger mt-2">
                 {{ $message }}
             </div>
             @enderror
         </div>
-
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-            <button type="submit" class="btn btn-md btn-success">SIMPAN</button>
-            <button type="reset" class="btn btn-md btn-warning">RESET</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
         </div>
     </div>
-
+ 
+</form>
 @endsection

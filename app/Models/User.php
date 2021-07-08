@@ -16,13 +16,14 @@ class User extends Authenticatable
      *
      * @var array
      */
+    protected $table = "users";
+
     protected $fillable = [
+        'role',
         'name',
         'email',
         'password',
-        'is_admin',
-        'google_id',
-        'username',
+        'google_id'
     ];
 
     /**
@@ -44,8 +45,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function murotals()
+    public function playlists()
     {
-        return $this->belongsToMany(Playlist::class);
+        return $this->hasMany(Playlist::class, 'playlist_id', 'id');
     }
+
 }

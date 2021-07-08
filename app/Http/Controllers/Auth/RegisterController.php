@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Validator;
 // use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use Laravel\Socialite\Facades\Socialite;
 
 
@@ -47,11 +48,47 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
-    // public function showRegistrationForm()
-    // {
-    //     return view('auth.register');
-    // }
-
+    public function register(Request $request)
+    {
+        $rules = [
+            'name'                  => 'required|min:3|max:35',
+            'email'                 => 'required|email|unique:users,email',
+            'password'              => 'required|confirmed'
+        ];
+  
+        $messages = [
+            'name.required'         => 'Nama Lengkap wajib diisi',
+            'name.min'              => 'Nama lengkap minimal 3 karakter',
+            'name.max'              => 'Nama lengkap maksimal 35 karakter',
+            'email.required'        => 'Email wajib diisi',
+            'email.email'           => 'Email tidak valid',
+            'email.unique'          => 'Email sudah terdaftar',
+            'password.required'     => 'Password wajib diisi',
+            'password.confirmed'    => 'Password tidak sama dengan konfirmasi password'
+        ];
+  
+        $validator = Validator::make($request->all(), $rules, $messages);
+  
+        if($validator->fails()){
+            return redirect()->back()->withErrors($validator)->withInput($request->all);
+        }
+  
+        $user = new User;
+        $user->name = ucwords(strtolower($request->name));
+        $user->email = strtolower($request->email);
+        $user->password = Hash::make($request->password);
+        $user->email_verified_at = \Carbon\Carbon::now();
+        $simpan = $user->save();
+  
+        if($simpan){
+            Session::flash('success', 'Register berhasil! Silahkan login untuk mengakses data');
+            return redirect()->route('login');
+        } else {
+            Session::flash('errors', ['' => 'Register gagal! Silahkan ulangi beberapa saat lagi']);
+            return redirect()->route('register');
+        }
+    }
+    
     // untuk login ke google
     public function redirect()
     {
@@ -74,6 +111,7 @@ class RegisterController extends Controller
                     'username' => $user->email,
                     'email' => $user->email,
                     'google_id'=> $user->id,
+                    'role'=> 'user',
                     // password tidak akan digunakan ;)
                     'password' => bcrypt('12345678')
                 ]);
@@ -100,6 +138,7 @@ class RegisterController extends Controller
                 'name' => $oauthUser->name,
                 'email' => $oauthUser->email,
                 'google_id'=> $oauthUser->id,
+                'role'=> 'user',
                 // password tidak akan digunakan ;)
                 'password' => md5($oauthUser->token),
             ]);
@@ -135,6 +174,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'role'=> 'user',
         ]);
     }
 }

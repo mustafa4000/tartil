@@ -9,7 +9,8 @@ class Home extends Model
 {
     use HasFactory;
 
+    protected $table = "homes";
     protected $fillable = [
-        'image', 'surat', 'qori', 'rewayat',
+        'image', 'surat', 'qori', 'rewayat', 'slug'
     ];
 }

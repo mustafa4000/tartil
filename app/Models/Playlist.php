@@ -10,12 +10,21 @@ class Playlist extends Model
     use HasFactory;
     protected $table = "playlists";
     protected $fillable = [
-        'name' , 'item_id'
+        'name'
     ];
 
-
-    public function murotals()
+    public function users()
     {
-        return $this->belongsToMany(User::class);
+        return $this->belongsTo(User::class,'user_id' , 'id');
+    }
+
+    public function playlist_users()
+    {
+        return $this->hasMany(PlaylistUser::class, 'playlist_id', 'id');
+    }
+
+    public function murotal_reciter_surah_playlists()
+    {
+        return $this->hasMany(MRSPlaylist::class, 'playlist_id' , 'id');
     }
 }

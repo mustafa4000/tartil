@@ -143,71 +143,7 @@
           </div>
         </form>
         <ul class="navbar-nav navbar-right">
-          <li class="dropdown mr-3"><a href="#" data-toggle="dropdown" style="color:#2F2F2F;"><i class="far fa-donate fa-1x" style="width: 18px"></i>  <b class="mr-2" style="font-size: 18px">Donasi</b> </a>
-            <div class="dropdown-menu dropdown-list dropdown-menu-right">
-              <div class="dropdown-header">Messages
-                <div class="float-right">
-                  <a href="#">Mark All As Read</a>
-                </div>
-              </div>
-              <div class="dropdown-list-content dropdown-list-message">
-                <a href="#" class="dropdown-item dropdown-item-unread">
-                  <div class="dropdown-item-avatar">
-                    <img alt="image" src="../assets/img/avatar/avatar-1.png" class="rounded-circle">
-                    <div class="is-online"></div>
-                  </div>
-                  <div class="dropdown-item-desc">
-                    <b>Kusnaedi</b>
-                    <p>Hello, Bro!</p>
-                    <div class="time">10 Hours Ago</div>
-                  </div>
-                </a>
-                <a href="#" class="dropdown-item dropdown-item-unread">
-                  <div class="dropdown-item-avatar">
-                    <img alt="image" src="../assets/img/avatar/avatar-2.png" class="rounded-circle">
-                  </div>
-                  <div class="dropdown-item-desc">
-                    <b>Dedik Sugiharto</b>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                    <div class="time">12 Hours Ago</div>
-                  </div>
-                </a>
-                <a href="#" class="dropdown-item dropdown-item-unread">
-                  <div class="dropdown-item-avatar">
-                    <img alt="image" src="../assets/img/avatar/avatar-3.png" class="rounded-circle">
-                    <div class="is-online"></div>
-                  </div>
-                  <div class="dropdown-item-desc">
-                    <b>Agung Ardiansyah</b>
-                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <div class="time">12 Hours Ago</div>
-                  </div>
-                </a>
-                <a href="#" class="dropdown-item">
-                  <div class="dropdown-item-avatar">
-                    <img alt="image" src="../assets/img/avatar/avatar-4.png" class="rounded-circle">
-                  </div>
-                  <div class="dropdown-item-desc">
-                    <b>Ardian Rahardiansyah</b>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit ess</p>
-                    <div class="time">16 Hours Ago</div>
-                  </div>
-                </a>
-                <a href="#" class="dropdown-item">
-                  <div class="dropdown-item-avatar">
-                    <img alt="image" src="../assets/img/avatar/avatar-5.png" class="rounded-circle">
-                  </div>
-                  <div class="dropdown-item-desc">
-                    <b>Alfa Zulkarnain</b>
-                    <p>Exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-                    <div class="time">Yesterday</div>
-                  </div>
-                </a>
-              </div>
-              <div class="dropdown-footer text-center">
-                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
-              </div>
-            </div>
+          <li class="mr-3"><a href="{{ route('pages.donate.index') }}" style="color:#2F2F2F;"><i class="far fa-donate fa-1x" style="width: 18px"></i>  <b class="mr-2" style="font-size: 18px">Donasi</b> </a>
           </li>
           <li class="dropdown dropdown-list-toggle mr-3"><a href="#" data-toggle="dropdown" style="color:#2F2F2F;">
             <i class="far fa-globe fa-1x" style="width: 18px"></i> <b class="mr-2" style="font-size: 18px">EN</b> </a>
@@ -277,12 +213,7 @@
               <a href="{{ route('profile.edit') }}" class="dropdown-item has-icon">
                 <i class="far fa-user"></i> Edit Profile
               </a>
-              {{-- <a href="features-activities.html" class="dropdown-item has-icon">
-                <i class="fas fa-bolt"></i> Activities
-              </a>
-              <a href="features-settings.html" class="dropdown-item has-icon">
-                <i class="fas fa-cog"></i> Settings
-              </a> --}}
+   
               <div class="dropdown-divider"></div>
               <a href="{{ route('logout') }}" class="dropdown-item has-icon text-danger"
                   onclick="event.preventDefault();
@@ -336,7 +267,7 @@
       <div class="main-content" style="background: #fff;">
         <section class="section">
           <div class="section-body">
-            <h3 style="color: #2F2F2F;">Home</h3>
+            <h3 style="color: #2F2F2F;"> <b>Home</b> </h3>
             <h5 style="color: #2F2F2F;">Top Playing</h5>            
             <table class="table" >
               <thead>
@@ -350,388 +281,113 @@
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">
-                    <a type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <img src="{{ url('/assets/img/Vector.png') }}" width="15" alt="">
-                    </a>
-                    <div class="dropdown-menu dropleft" x-placement="left-start" style="position: absolute; transform: translate3d(-202px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
-                      <a class="dropdown-item" href="#">
-                        <div class="row container-fluid">
-                          <div class="col">
-                            <img src="{{ url('/assets/imgtartil/Abdallah Kamel.jpg') }}" width="50" alt="">
-                            <b>Al-fatihah (The Opener)</b>  
-                            <b>Abdallah Kamel</b>  
+                  {{-- @foreach ($homes as $home) --}}
+                    <th scope="row">
+                      <a type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="{{ url('/assets/img/Vector.png') }}" width="15" alt="">
+                      </a>
+                      <div class="dropdown-menu dropleft" x-placement="left-start" style="position: absolute; transform: translate3d(-202px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
+                        <a class="dropdown-item" href="#">
+                          <div class="row container-fluid">
+                            <div class="col">
+                              <img src="{{ url('/assets/imgtartil/Abdallah Kamel.jpg') }}" width="50" alt="">
+                              <b>Al-fatihah (The Opener)</b>
+                              <b>Abdallah Kamel</b>  
+                            </div>
+                            <div class="col">
+                              <audio controls> 
+                                <source src="{{ url('/assets/audio/Surat Al Fatihah Oleh Syaikh Abdallah Kamel.mp3') }}" type="audio/mpeg"> 
+                              </audio>
+                            </div>
                           </div>
-                          <div class="col">
-                            <audio controls> 
-                              <source src="{{ url('/assets/audio/Surat Al Fatihah Oleh Syaikh Abdallah Kamel.mp3') }}" type="audio/mpeg"> 
-                            </audio>
-                          </div>
+                        </a>
+                      </div>
+                    </th>
+                  @foreach ($reciters as $reciter)  
+                    <td>
+                        <a style="font-size: 16px; color:#2F2F2F">Al-Fatiha( The Opener )</a> 
+                    </td>  
+                    <td>
+                      <a href="{{ route('reciters.show', ['slug' => $reciter->slug] ) }}" style="font-size: 16px; color:#2F2F2F">{{ $reciter->name }} </a>
+                    </td>
+                    <td>
+                      <a href="" style="font-size: 16px; color:#2F2F2F">@foreach($reciter->riwayats as $riwayat) {{ $riwayat->name }} @endforeach</a>
+                    </td>
+                  @endforeach                     
+                    <td class="row">
+                      <div class="btn-group dropleft col">
+                        <a type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fas fa-align-justify" style="color: #2F2F2F;"></i> 
+                        </a>
+                        <div class="dropdown-menu dropleft" x-placement="left-start" style="position: absolute; transform: translate3d(-202px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#">Separated link</a>
                         </div>
-                      </a>
-                    </div>
-                  </th>
-                  <td><a style="font-size: 16px; color:#2F2F2F">Al-Fatiha( The Opener )</a> </td>
-                  <td> <a href="{{ route('pages.receiter.play') }}" style="font-size: 16px; color:#2F2F2F">Abdallah Kamel</a></td>
-                  <td> <a href="" style="font-size: 16px; color:#2F2F2F">Hafs A'n Assem</a></td>
-                  <td class="row">
-                    <div class="btn-group dropleft col">
-                      <a type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-align-justify" style="color: #2F2F2F;"></i> 
-                      </a>
-                      <div class="dropdown-menu dropleft" x-placement="left-start" style="position: absolute; transform: translate3d(-202px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Separated link</a>
                       </div>
-                    </div>
-                    <div class="btn-group dropleft col">
-                      <a type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="far fa-star" style="color: #2F2F2F;"></i>
-                      </a>
-                      <div class="dropdown-menu dropleft" x-placement="left-start" style="position: absolute; transform: translate3d(-202px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
-                        <a class="dropdown-item" href="#"> 
-                          <img src="{{ url('/assets/imgtartil/fb.png') }}" width="10" alt=""> Facebook
+                      <div class="btn-group dropleft col">
+                        <a type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="far fa-star" style="color: #2F2F2F;"></i>
                         </a>
-                        <a class="dropdown-item" href="#">
-                            <img src="{{ url('/assets/imgtartil/instagram.png') }}" width="15" alt=""> Instagram
-                        </a>
-                        <a class="dropdown-item" href="#"> 
-                            <img src="{{ url('/assets/imgtartil/Telegram.png') }}" width="15" alt=""> Telegram
-                        </a>
-                        <a class="dropdown-item" href="#">
-                            <img src="{{ url('/assets/imgtartil/Twitter.png') }}" width="15" alt=""> Twitter
-                        </a>
-                        <a class="dropdown-item" href="#"> 
-                            <img src="{{ url('/assets/imgtartil/Whatsapp.png') }}" width="15" alt=""> Whatsapps
-                        </a>
-                      </div>
-                    </div>
-                    <div class="btn-group dropleft col">
-                      <a type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="far fa-ellipsis-h" style="color: #2F2F2F;"></i>
-                      </a>
-                      <div class="dropdown-menu dropleft" x-placement="left-start" style="position: absolute; transform: translate3d(-202px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
-                        <a class="dropdown-item" href="#" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
-                          <img src="{{ url('/assets/img/Share.png') }}" width="15" alt=""> 
-                          Share
-
-                          <div class="dropdown-menu dropleft" x-placement="left-start" style="position: absolute; transform: translate3d(-202px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
-                            <a class="dropdown-item" target="_blank" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="large" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
-                              <img src="{{ url('/assets/img/fb.png') }}" width="10" alt=""> Facebook
-                            </a>
-
-                            <a class="dropdown-item" href="#">
-                                <img src="{{ url('/assets/img/instagram.png') }}" width="15" alt=""> Instagram
-                            </a>
-                            
-                            <a class="dropdown-item" href="#"> 
-                                <img src="{{ url('/assets/img/Telegram.png') }}" width="15" alt=""> Telegram
-                            </a>
-
-                            <a class="dropdown-item" href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button">
-                                <img src="{{ url('/assets/img/Twitter.png') }}" width="15" alt=""> Twitter
-                            </a>
-
-                            <a class="dropdown-item" href="whatsapp://send?text=<URL>" data-action="share/whatsapp/share" onClick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" title="Share on whatsapp"> 
-                                <img src="{{ url('/assets/img/Whatsapp.png') }}" width="15" alt=""> Whatsapps
-                            </a>
-                          </div>  
-                        </a>
-                        <a href="{{ url('/assets/audio/Surat Al Fatihah Oleh Syaikh Abdallah Kamel.mp3') }}" class="dropdown-item" download="Surat Al Fatihah Oleh Syaikh Abdallah Kamel.mp3"> 
-                          <img src="{{ url('/assets/img/Download.png') }}" width="15" alt=""> 
-                          Download
-                        </a>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <a type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <img src="{{ url('/assets/img/Vector.png') }}" width="15" alt="">
-                    </a>
-                    <div class="dropdown-menu dropleft" x-placement="left-start" style="position: absolute; transform: translate3d(-202px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
-                      <a class="dropdown-item" href="#">
-                        <div class="row container-fluid">
-                          <div class="col">
-                            <img src="{{ url('/assets/imgtartil/Abdel Aziz Al Ahmed.jpeg') }}" width="50" alt="">
-                            <b>Al-Maidah( The Table Spread )</b>  
-                            <b>Abdel Aziz Al Ahmed</b>  
-                          </div>
-                          <div class="col">
-                            <audio controls> 
-                              <source src="{{ url('/assets/audio/Sourat Al Maidah oleh Abdel Aziz Al Ahmed.mp3') }}" type="audio/mpeg"> 
-                            </audio>
-                          </div>
+                        <div class="dropdown-menu dropleft" x-placement="left-start" style="position: absolute; transform: translate3d(-202px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
+                          <a class="dropdown-item" href="#"> 
+                            <img src="{{ url('/assets/imgtartil/fb.png') }}" width="10" alt=""> Facebook
+                          </a>
+                          <a class="dropdown-item" href="#">
+                              <img src="{{ url('/assets/imgtartil/instagram.png') }}" width="15" alt=""> Instagram
+                          </a>
+                          <a class="dropdown-item" href="#"> 
+                              <img src="{{ url('/assets/imgtartil/Telegram.png') }}" width="15" alt=""> Telegram
+                          </a>
+                          <a class="dropdown-item" href="#">
+                              <img src="{{ url('/assets/imgtartil/Twitter.png') }}" width="15" alt=""> Twitter
+                          </a>
+                          <a class="dropdown-item" href="#"> 
+                              <img src="{{ url('/assets/imgtartil/Whatsapp.png') }}" width="15" alt=""> Whatsapps
+                          </a>
                         </div>
-                      </a>
-                    </div>
-                  </th>
-                  <td><a style="font-size: 16px; color:#2F2F2F">Al-Maidah( The Table Spread )</a></td>
-                  <td><a href="{{ route('pages.receiter.AlAhmed') }}" style="font-size: 16px; color:#2F2F2F">Abdel Aziz Al Ahmed</a></td>
-                  <td><a href="" style="font-size: 16px; color:#2F2F2F">Hafs A'n Assem</a></td>
-                  <td class="row">
-                    <div class="btn-group dropleft col">
-                      <a type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-align-justify" style="color: #2F2F2F;"></i> 
-                      </a>
-                      <div class="dropdown-menu dropleft" x-placement="left-start" style="position: absolute; transform: translate3d(-202px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Separated link</a>
                       </div>
-                    </div>
-                    <div class="btn-group dropleft col">
-                      <a type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="far fa-star" style="color: #2F2F2F;"></i>
-                      </a>
-                      <div class="dropdown-menu dropleft" x-placement="left-start" style="position: absolute; transform: translate3d(-202px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
-                        <a class="dropdown-item" href="#"> 
-                          <img src="{{ url('/assets/imgtartil/fb.png') }}" width="10" alt=""> Facebook
+                      <div class="btn-group dropleft col">
+                        <a type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="far fa-ellipsis-h" style="color: #2F2F2F;"></i>
                         </a>
-                        <a class="dropdown-item" href="#">
-                            <img src="{{ url('/assets/imgtartil/instagram.png') }}" width="15" alt=""> Instagram
-                        </a>
-                        <a class="dropdown-item" href="#"> 
-                            <img src="{{ url('/assets/imgtartil/Telegram.png') }}" width="15" alt=""> Telegram
-                        </a>
-                        <a class="dropdown-item" href="#">
-                            <img src="{{ url('/assets/imgtartil/Twitter.png') }}" width="15" alt=""> Twitter
-                        </a>
-                        <a class="dropdown-item" href="#"> 
-                            <img src="{{ url('/assets/imgtartil/Whatsapp.png') }}" width="15" alt=""> Whatsapps
-                        </a>
-                      </div>
-                    </div>
-                    <div class="btn-group dropleft col">
-                      <a type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="far fa-ellipsis-h" style="color: #2F2F2F;"></i>
-                      </a>
-                      <div class="dropdown-menu dropleft" x-placement="left-start" style="position: absolute; transform: translate3d(-202px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
-                        <a class="dropdown-item" href="#" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
-                          <img src="{{ url('/assets/img/Share.png') }}" width="15" alt=""> 
-                          Share
+                        <div class="dropdown-menu dropleft" x-placement="left-start" style="position: absolute; transform: translate3d(-202px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
+                          <a class="dropdown-item" href="#" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+                            <img src="{{ url('/assets/img/Share.png') }}" width="15" alt=""> 
+                            Share
 
-                          <div class="dropdown-menu dropleft" x-placement="left-start" style="position: absolute; transform: translate3d(-202px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
-                            <a class="dropdown-item" href="#"> 
-                              <img src="{{ url('/assets/img/fb.png') }}" width="10" alt=""> Facebook
-                            </a>
-                            <a class="dropdown-item" href="#">
-                                <img src="{{ url('/assets/img/instagram.png') }}" width="15" alt=""> Instagram
-                            </a>
-                            <a class="dropdown-item" href="#"> 
-                                <img src="{{ url('/assets/img/Telegram.png') }}" width="15" alt=""> Telegram
-                            </a>
-                            <a class="dropdown-item" href="#">
-                                <img src="{{ url('/assets/img/Twitter.png') }}" width="15" alt=""> Twitter
-                            </a>
-                            <a class="dropdown-item" href="#"> 
-                                <img src="{{ url('/assets/img/Whatsapp.png') }}" width="15" alt=""> Whatsapps
-                            </a>
-                          </div>
-                        </a>
-                        <a href="{{ url('/assets/audio/Sourat Al Maidah oleh Abdel Aziz Al Ahmed.mp3') }}" class="dropdown-item" download="Sourat Al Maidah oleh Abdel Aziz Al Ahmed.mp3"> 
-                          <img src="{{ url('/assets/img/Download.png') }}" width="15" alt=""> 
-                          Download
-                        </a>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <a type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <img src="{{ url('/assets/img/Vector.png') }}" width="15" alt="">
-                    </a>
-                    <div class="dropdown-menu dropleft" x-placement="left-start" style="position: absolute; transform: translate3d(-202px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
-                      <a class="dropdown-item" href="#">
-                        <div class="row container-fluid">
-                          <div class="col">
-                            <img src="{{ url('/assets/imgtartil/Abdelhamid Hssain - Warsh.jpeg') }}" width="50" alt="">
-                            <b>Al-Kahf (The Cave)</b>  
-                            <b>Abdelhamid Hssain - Warsh</b>  
-                          </div>
-                          <div class="col">
-                            <audio controls> 
-                              <source src="{{ url('/assets/audio/Surah AlKahf The Cave Jamal Shaker Abdullah_ Quran Recitation.mp3') }}" type="audio/mpeg"> 
-                            </audio>
-                          </div>
+                            <div class="dropdown-menu dropleft" x-placement="left-start" style="position: absolute; transform: translate3d(-202px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
+                              <a class="dropdown-item" target="_blank" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="large" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
+                                <img src="{{ url('/assets/img/fb.png') }}" width="10" alt=""> Facebook
+                              </a>
+
+                              <a class="dropdown-item" href="#">
+                                  <img src="{{ url('/assets/img/instagram.png') }}" width="15" alt=""> Instagram
+                              </a>
+                              
+                              <a class="dropdown-item" href="#"> 
+                                  <img src="{{ url('/assets/img/Telegram.png') }}" width="15" alt=""> Telegram
+                              </a>
+
+                              <a class="dropdown-item" href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button">
+                                  <img src="{{ url('/assets/img/Twitter.png') }}" width="15" alt=""> Twitter
+                              </a>
+
+                              <a class="dropdown-item" href="whatsapp://send?text=<URL>" data-action="share/whatsapp/share" onClick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" title="Share on whatsapp"> 
+                                  <img src="{{ url('/assets/img/Whatsapp.png') }}" width="15" alt=""> Whatsapps
+                              </a>
+                            </div>  
+                          </a>
+                          <a href="{{ url('/assets/audio/Surat Al Fatihah Oleh Syaikh Abdallah Kamel.mp3') }}" class="dropdown-item" download="Surat Al Fatihah Oleh Syaikh Abdallah Kamel.mp3"> 
+                            <img src="{{ url('/assets/img/Download.png') }}" width="15" alt=""> 
+                            Download
+                          </a>
                         </div>
-                      </a>
-                    </div>
-                  </th>
-                  <td><a style="font-size: 16px; color:#2F2F2F">Al-Kahf( The Cave )</a></td>
-                  <td><a href="{{ route('pages.receiter.Warsh') }}" style="font-size: 16px; color:#2F2F2F">Abdelhamid Hssain - Warsh</a></td>
-                  <td><a href="" style="font-size: 16px; color:#2F2F2F">Hafs A'n Assem</a></td>
-                  <td class="row">
-                    <div class="btn-group dropleft col">
-                      <a type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-align-justify" style="color: #2F2F2F;"></i> 
-                      </a>
-                      <div class="dropdown-menu dropleft" x-placement="left-start" style="position: absolute; transform: translate3d(-202px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Separated link</a>
                       </div>
-                    </div>
-                    <div class="btn-group dropleft col">
-                      <a type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="far fa-star" style="color: #2F2F2F;"></i>
-                      </a>
-                      <div class="dropdown-menu dropleft" x-placement="left-start" style="position: absolute; transform: translate3d(-202px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
-                        <a class="dropdown-item" href="#"> 
-                          <img src="{{ url('/assets/imgtartil/fb.png') }}" width="10" alt=""> Facebook
-                        </a>
-                        <a class="dropdown-item" href="#">
-                            <img src="{{ url('/assets/imgtartil/instagram.png') }}" width="15" alt=""> Instagram
-                        </a>
-                        <a class="dropdown-item" href="#"> 
-                            <img src="{{ url('/assets/imgtartil/Telegram.png') }}" width="15" alt=""> Telegram
-                        </a>
-                        <a class="dropdown-item" href="#">
-                            <img src="{{ url('/assets/imgtartil/Twitter.png') }}" width="15" alt=""> Twitter
-                        </a>
-                        <a class="dropdown-item" href="#"> 
-                            <img src="{{ url('/assets/imgtartil/Whatsapp.png') }}" width="15" alt=""> Whatsapps
-                        </a>
-                      </div>
-                    </div>
-                    <div class="btn-group dropleft col">
-                      <a type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="far fa-ellipsis-h" style="color: #2F2F2F;"></i>
-                      </a>
-                      <div class="dropdown-menu dropleft" x-placement="left-start" style="position: absolute; transform: translate3d(-202px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
-                        <a class="dropdown-item" href="#" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
-                          <img src="{{ url('/assets/img/Share.png') }}" width="15" alt=""> 
-                          Share
-
-                          <div class="dropdown-menu dropleft" x-placement="left-start" style="position: absolute; transform: translate3d(-202px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
-                            <a class="dropdown-item" href="#"> 
-                              <img src="{{ url('/assets/img/fb.png') }}" width="10" alt=""> Facebook
-                            </a>
-                            <a class="dropdown-item" href="#">
-                                <img src="{{ url('/assets/img/instagram.png') }}" width="15" alt=""> Instagram
-                            </a>
-                            <a class="dropdown-item" href="#"> 
-                                <img src="{{ url('/assets/img/Telegram.png') }}" width="15" alt=""> Telegram
-                            </a>
-                            <a class="dropdown-item" href="#">
-                                <img src="{{ url('/assets/img/Twitter.png') }}" width="15" alt=""> Twitter
-                            </a>
-                            <a class="dropdown-item" href="#"> 
-                                <img src="{{ url('/assets/img/Whatsapp.png') }}" width="15" alt=""> Whatsapps
-                            </a>
-                          </div>
-                        </a>
-                        <a href="{{ url('/assets/audio/Sourat Al Maidah oleh Abdel Aziz Al Ahmed.mp3') }}" class="dropdown-item" download="Sourat Al Maidah oleh Abdel Aziz Al Ahmed.mp3"> 
-                          <img src="{{ url('/assets/img/Download.png') }}" width="15" alt=""> 
-                          Download
-                        </a>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <a type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <img src="{{ url('/assets/img/Vector.png') }}" width="15" alt="">
-                    </a>
-                    <div class="dropdown-menu dropleft" x-placement="left-start" style="position: absolute; transform: translate3d(-202px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
-                      <a class="dropdown-item" href="#">
-                        <div class="row container-fluid">
-                          <div class="col">
-                            <img src="{{ url('/assets/imgtartil/Abdul Aziz Brown.jpg') }}" width="50" alt="">
-                            <b>Al-Kahf (The Cave)</b>  
-                            <b>Abdul Aziz Brown</b>  
-                          </div>
-                          <div class="col">
-                            <audio controls> 
-                              <source src="{{ url('/assets/audio/Mohammad Saleh Alim Shah  Surah ArRahman.mp3') }}" type="audio/mpeg"> 
-                            </audio>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </th>
-                  <td><a style="font-size: 16px; color:#2F2F2F">Al-Rahman( The Beneficent )</a></td>
-                  <td><a href="{{ route('pages.receiter.Brown') }}" style="font-size: 16px; color:#2F2F2F">Abdul Aziz Brown</a></td>
-                  <td><a href="" style="font-size: 16px; color:#2F2F2F">Hafs A'n Assem</a></td>
-                  <td class="row">
-                    <div class="btn-group dropleft col">
-                      <a type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-align-justify" style="color: #2F2F2F;"></i> 
-                      </a>
-                      <div class="dropdown-menu dropleft" x-placement="left-start" style="position: absolute; transform: translate3d(-202px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Separated link</a>
-                      </div>
-                    </div>
-                    <div class="btn-group dropleft col">
-                      <a type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="far fa-star" style="color: #2F2F2F;"></i>
-                      </a>
-                      <div class="dropdown-menu dropleft" x-placement="left-start" style="position: absolute; transform: translate3d(-202px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
-                        <a class="dropdown-item" href="#"> 
-                          <img src="{{ url('/assets/imgtartil/fb.png') }}" width="10" alt=""> Facebook
-                        </a>
-                        <a class="dropdown-item" href="#">
-                            <img src="{{ url('/assets/imgtartil/instagram.png') }}" width="15" alt=""> Instagram
-                        </a>
-                        <a class="dropdown-item" href="#"> 
-                            <img src="{{ url('/assets/imgtartil/Telegram.png') }}" width="15" alt=""> Telegram
-                        </a>
-                        <a class="dropdown-item" href="#">
-                            <img src="{{ url('/assets/imgtartil/Twitter.png') }}" width="15" alt=""> Twitter
-                        </a>
-                        <a class="dropdown-item" href="#"> 
-                            <img src="{{ url('/assets/imgtartil/Whatsapp.png') }}" width="15" alt=""> Whatsapps
-                        </a>
-                      </div>
-                    </div>
-                    <div class="btn-group dropleft col">
-                      <a type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="far fa-ellipsis-h" style="color: #2F2F2F;"></i>
-                      </a>
-                      <div class="dropdown-menu dropleft" x-placement="left-start" style="position: absolute; transform: translate3d(-202px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
-                        <a class="dropdown-item" href="#" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
-                          <img src="{{ url('/assets/img/Share.png') }}" width="15" alt=""> 
-                          Share
-
-                          <div class="dropdown-menu dropleft" x-placement="left-start" style="position: absolute; transform: translate3d(-202px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
-                            <a class="dropdown-item" href="#"> 
-                              <img src="{{ url('/assets/img/fb.png') }}" width="10" alt=""> Facebook
-                            </a>
-                            <a class="dropdown-item" href="#">
-                                <img src="{{ url('/assets/img/instagram.png') }}" width="15" alt=""> Instagram
-                            </a>
-                            <a class="dropdown-item" href="#"> 
-                                <img src="{{ url('/assets/img/Telegram.png') }}" width="15" alt=""> Telegram
-                            </a>
-                            <a class="dropdown-item" href="#">
-                                <img src="{{ url('/assets/img/Twitter.png') }}" width="15" alt=""> Twitter
-                            </a>
-                            <a class="dropdown-item" href="#"> 
-                                <img src="{{ url('/assets/img/Whatsapp.png') }}" width="15" alt=""> Whatsapps
-                            </a>
-                          </div>
-                        </a>x
-                        <a href="{{ url('/assets/audio/Mohammad Saleh Alim Shah  Surah ArRahman.mp3') }}" class="dropdown-item" download="Mohammad Saleh Alim Shah  Surah ArRahman.mp3"> 
-                          <img src="{{ url('/assets/img/Download.png') }}" width="15" alt=""> 
-                          Download
-                        </a>
-                      </div>
-                    </div>
-                  </td>
+                    </td>    
+                  {{-- @endforeach --}}
                 </tr>
               </tbody>
             </table>  
@@ -745,14 +401,13 @@
                   <a href="{{ route('pages.receiter') }}"> <p style="text-align: end; color:#169E53;">See all</p> </a>
                 </div>
               </div>
-              <div class="card-deck">
+              <div class="row responsive">
                 @foreach ($reciters as $reciter)
-                  <div class="card w3-white w3-hover-shadow">
-                    <img class="card-img-top" class="img-rounded" src="{{ Storage::url($reciter->image) }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
-                    <div class="card-body">
+                  <div class="col-2 w3-white w3-hover-shadow">
+                    <img class="card-img-top" class="img-rounded" src="{{ $reciter->image_url }}" width="132px" height="132px" style="border-radius: 8px; object-fit: cover;" alt="Card image cap">
+                    <div class="m-3 text-center">
                       <div class="card-title">
-                        <a href="" style="font-size: 13px; color:#2F2F2F;" class="text-center">{{ $reciter->name }}</p> </a>
-                        {{-- {{ route('reciters.show', ['slug' => $reciter->slug] ) }} --}}
+                        <a href="{{ route('reciters.show', ['slug' => $reciter->slug] ) }}" style="font-size: 11px; color:#2F2F2F; text-align: center;" >{{ $reciter->name }} </a>
                       </div>
                     </div>
                   </div>
@@ -761,7 +416,9 @@
             </div>
             
             <div>
-              <h5 style="color: #2F2F2F">All Surah</h5>
+              <div class="col">
+                <h5 style="color: #2F2F2F">All Surah</h5>
+              </div>
               <div class="row">
                 {{-- 1 samapai 4 kolom --}}
                 <?php $i =1; ?>
@@ -802,16 +459,43 @@
   </div>
 
   <script type="text/javascript">
-    // var myAudio = document.getElementById("Audio");
-    // var isPlaying = false;
-    // function togglePlay() {
-    //     myAudio.play();
-    //     terakhir = document.querySelector('#box');
-    //   terakhir.classList.add('show');
-    // };
+    $('.responsive').slick({
+      dots: true,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
   </script>
 
-  <script src="{{ asset('/assets/js/audio.js') }}"></script>
 
   <!-- General JS Scripts -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

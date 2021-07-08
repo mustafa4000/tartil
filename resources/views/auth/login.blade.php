@@ -37,9 +37,9 @@
                 <form method="POST" action="{{ route('login') }}" class="needs-validation" novalidate="">
                   @csrf
                   <div class="form-group">
-                    <label for="username" style="color: #646464;">Email</label>
-                    <input id="username" style="background: #F6F6F6;" type="text" name="username" class="form-control @error('username') is-invalid @enderror" tabindex="1" value="{{ old('username') }}" required autocomplete="email" autofocus placeholder="emailname@mail.com">
-                    @error('username')
+                    <label for="email" style="color: #646464;">Email</label>
+                    <input id="email" style="background: #F6F6F6;" type="text" name="email" class="form-control @error('email') is-invalid @enderror" tabindex="1" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="emailname@mail.com">
+                    @error('email')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>

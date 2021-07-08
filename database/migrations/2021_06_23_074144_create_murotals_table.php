@@ -16,7 +16,7 @@ class CreateMurotalsTable extends Migration
         Schema::create('murotals', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('path');
+            $table->string('file');
             $table->timestamps();
         });
     }

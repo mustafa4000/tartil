@@ -6,6 +6,7 @@ use App\Models\Murotal;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Collection;
+use App\File;
 use Illuminate\Support\Facades\Storage;
 
 class MurotalController extends Controller
@@ -17,8 +18,8 @@ class MurotalController extends Controller
      */
     public function index()
     {
-        $murotals = Murotal::all();
-        return view('murotals.index', compact('murotals'));
+        $murotals = Murotal::with(['reciter_riwayats', 'reciter_riwayats.surah'])->orderBy('name', 'asc')->get();
+        return view('murotals.index',compact('murotals', ['murotals' => $murotals]))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -41,17 +42,18 @@ class MurotalController extends Controller
     {
         $request->validate([
             'name'   => 'required',
-            'file' => 'required|file|mimes:pdf,xlx,csv|max:2048',
+            'file' =>'required|mimes:mp3'
         ]);
 
-        $path = $request->file('file')->store('public/files');
-        $murotals = new Murotal();
-     
-        $murotals->name = $request->name;
-        $murotals->image = $path;
-        $murotals->save();
+        $file = $request->file('file');
+        $fileName = time() . '.' . $file->getClientOriginalName();
+        $file->move(public_path('file'), $fileName);
+        $request->merge(['slug' => Str::slug($request->name)]);
+        $data = $request->all();
+        $data['file'] = 'file/' . $fileName;
+        Murotal::create($data);
 
-        return redirect()->route('murotals.index')->with('success', 'Post has been created successfully.');
+        return redirect()->route('murotals.index')->with('success','Post created successfully.');
     }
 
     /**
@@ -62,7 +64,7 @@ class MurotalController extends Controller
      */
     public function show(Murotal $murotal)
     {
-        // return view('reciters.reciter',compact('reciters'));
+        return view('murotals.show',compact('murotal'));
     }
 
     /**
@@ -71,9 +73,9 @@ class MurotalController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Murotal $murotals)
+    public function edit(Murotal $murotal)
     {
-        return view('murotals.edit', compact('murotals'));
+        return view('murotals.edit', compact('murotal'));
     }
 
     /**
@@ -87,22 +89,11 @@ class MurotalController extends Controller
     {
         $request->validate([
             'name' => 'required',
+            'file' => 'required',
         ]);
 
-        $murotals = Murotal::find($murotal);
-        if ($request->hasFile('file')) {
-            $request->validate([
-                'file' => 'required|file|mimes:pdf,xlx,csv|max:2048',
-            ]);
-            $path = $request->file('file')->store('public/images');
-            $murotal->file = $path;
-        }
-        $murotals->name = $request->name;
-        $murotals->save;
-
-        return redirect()->route('murotals.index')->with('success', 'Post updated successfully');
-        
-    
+        $murotal->update($request->all());
+        return redirect()->route('murotals.index')->with('success','Post updated successfully');
     }
 
     /**
@@ -111,10 +102,9 @@ class MurotalController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Murotal $murotals)
+    public function destroy(Murotal $murotal)
     {
-        $murotals->delete();
-
-        return redirect()->route('murotals.index')->with('success', 'Post deleted successfully');
+        $murotal->delete();
+        return redirect()->route('murotals.index')->with('success', 'Berhasil di hapus.');
     }
 }

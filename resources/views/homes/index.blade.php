@@ -10,11 +10,7 @@
         <div class="text-right">
             <a class="btn btn-success" href="{{ route('homes.create') }}"> Create Post</a>
         </div>  
-        {{--@if ($message = Session::get('success'))
-          <div class="alert alert-success">
-              <p>{{ $message }}</p>
-          </div>
-        @endif --}}
+
         <table class="table">
           <thead>
             <tr>
@@ -29,21 +25,21 @@
             @forelse ($homes as $home)
               <tr>
                   <th class="text-center" scope="row">
-                    <img src="{{ Storage::url($home->image) }}" height="15" width="15" alt="" />  
+                    <img src="{{ $home->image }}" height="15" width="15" alt="" />  
                   </th>
                   <td style="font-size: 16px; color:#2F2F2F">{{ $home->surat }}</td>
-                  <td style="font-size: 16px; color:#2F2F2F">{{ $home->qori }}</td>
+                  <td style="font-size: 16px; color:#2F2F2F"><a href="">{{ $home->qori }}</a> </td>
                   <td style="font-size: 16px; color:#2F2F2F">{{ $home->rewayat }}</td>
                   <td class="text-center">
                       <form action="{{ route('homes.destroy',$home->id) }}" method="POST" class="text-left">
                         <div class="row">
                           <div class="col">
-                            <a href="{{ route('homes.player',$home->id) }}"><i class="fas fa-align-justify" style="color: #2F2F2F;"></i></a>
+                            <a href=""><i class="fas fa-align-justify" style="color: #2F2F2F;"></i></a>
                           </div>
                           <div class="col">
-                            <a class="btn btn-sm" href="{{ route('homes.show',$home->id) }}"><i class="far fa-star" style="color: #2F2F2F;"></i></a>
+                            <a class="btn btn-sm" href=""><i class="far fa-star" style="color: #2F2F2F;"></i></a>
                           </div>
-                          
+                            
                           @csrf
                           @method('DELETE')
         
@@ -96,13 +92,13 @@
             @endforelse
           <tbody>
         </table>
-        {!! $homes->links() !!}
+        {{-- {!! $homes->links() !!} --}}
         
       </div>
     </section>
 @endsection
 
-@push('before-sc  qript')
+@push('before-script')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>

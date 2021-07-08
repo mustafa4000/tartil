@@ -10,6 +10,8 @@ use Illuminate\Validation\ValidationException;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Validator;
 use Laravel\Socialite\Facades\Socialite;
 
 class LoginController extends Controller
@@ -44,29 +46,6 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    // multi auth
-    public function login(Request $request)
-    {   
-        $input = $request->all();
-   
-        $this->validate($request, [
-            'email' => 'required|email',
-            'password' => 'required',
-        ]);
-   
-        if(Auth::attempt(array('email' => $input['email'], 'password' => $input['password'])))
-        {
-            if (auth()->user()->is_admin == 1) {
-                return redirect()->route('admin.route');
-            }else{
-                return redirect()->route('dashboard');
-            }
-        }else{
-            return redirect()->route('login')
-                ->with('error','Email-Address And Password Are Wrong.');
-        }
-          
-    }
     // untuk login ke google
     public function redirect()
     {
@@ -79,16 +58,16 @@ class LoginController extends Controller
             $user = Socialite::driver('google')->user();
             // dd($user->getId());
             $finduser = User::where('google_id', $user->getId())->first();
-            
+
             if ($finduser) {
                 Auth::login($finduser);
                 return redirect()->intended('dashboard');
-            }else {
+            } else {
                 $newUser = User::create([
                     'name' => $user->name,
                     'username' => $user->email,
                     'email' => $user->email,
-                    'google_id'=> $user->id,
+                    'google_id' => $user->id,
                     // password tidak akan digunakan ;)
                     'password' => bcrypt('12345678')
                 ]);
@@ -100,11 +79,11 @@ class LoginController extends Controller
             //throw $th;
         }
 
-         // jika user masih login lempar ke home
-         if (Auth::check()) {
+        // jika user masih login lempar ke home
+        if (Auth::check()) {
             return redirect('/dashboard');
         }
- 
+
         $oauthUser = Socialite::driver('google')->user();
         $user = User::where('google_id', $oauthUser->id)->first();
         if ($user) {
@@ -114,7 +93,7 @@ class LoginController extends Controller
             $newUser = User::create([
                 'name' => $oauthUser->name,
                 'email' => $oauthUser->email,
-                'google_id'=> $oauthUser->id,
+                'google_id' => $oauthUser->id,
                 // password tidak akan digunakan ;)
                 'password' => md5($oauthUser->token),
             ]);
@@ -122,21 +101,4 @@ class LoginController extends Controller
             return redirect('/dashboard');
         }
     }
-
-    // untuk menampilkan failed
-    protected function sendFailedLoginResponse()
-    {
-        throw ValidationException::withMessages([
-            'username' => [trans('auth.failed')],
-        ]);
-    }
-
-    public function username()
-    {
-        $login = request()->input('username');
-        $field = filter_var($login, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
-        request()->merge([$field => $login]);
-        return $field;
-    }
-
 }

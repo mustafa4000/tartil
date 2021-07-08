@@ -12,7 +12,7 @@
     </div>
 </div>
  
-{{-- @if ($errors->any())
+@if ($errors->any())
     <div class="alert alert-danger">
         <strong>Whoops!</strong> There were some problems with your input.<br><br>
         <ul>
@@ -21,7 +21,7 @@
             @endforeach
         </ul>
     </div>
-@endif --}}
+@endif
  
 <form action="{{ route('surahs.store') }}" method="POST">
     @csrf
