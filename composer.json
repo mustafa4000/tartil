@@ -14,7 +14,8 @@
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.3",
         "realrashid/sweet-alert": "^4.0",
-        "spatie/laravel-fractal": "^5.8"
+        "spatie/laravel-fractal": "^5.8",
+        "wapmorgan/mp3info": "^0.0.5"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

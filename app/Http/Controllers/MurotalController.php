@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Collection;
 use App\File;
+use App\Models\Playlist;
 use Illuminate\Support\Facades\Storage;
 
 class MurotalController extends Controller
@@ -19,6 +20,7 @@ class MurotalController extends Controller
     public function index()
     {
         $murotals = Murotal::with(['reciter_riwayats', 'reciter_riwayats.surah'])->orderBy('name', 'asc')->get();
+        // dd($murotals);
         return view('murotals.index',compact('murotals', ['murotals' => $murotals]))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -53,7 +55,7 @@ class MurotalController extends Controller
         $data['file'] = 'file/' . $fileName;
         Murotal::create($data);
 
-        return redirect()->route('murotals.index')->with('success','Post created successfully.');
+        return redirect()->route('murotals.index')->with('success','Berhasil');
     }
 
     /**
@@ -62,8 +64,14 @@ class MurotalController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Murotal $murotal)
+    public function show($slug)
     {
+        $murotal = Murotal::where('slug', $slug)->first();
+        // dd($reciter);    
+        if (!$murotal) {
+            return abort(404);
+        }
+
         return view('murotals.show',compact('murotal'));
     }
 
@@ -93,7 +101,7 @@ class MurotalController extends Controller
         ]);
 
         $murotal->update($request->all());
-        return redirect()->route('murotals.index')->with('success','Post updated successfully');
+        return redirect()->route('murotals.index')->with('success','Updated Berhasil.');
     }
 
     /**

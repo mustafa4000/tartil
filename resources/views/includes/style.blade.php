@@ -58,5 +58,18 @@
       text-align: left;
       background-color: #f  ff;
     }
+
+
+    /* Playing */
+    #playing {
+      background: #F6F6F6;
+      height: 80px;
+      position: fixed;
+      bottom: 0px;
+      right: 0;
+      left: 0;
+      z-index: 9999999999;
+      width: 100%;
+    }
   </style>
 {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> --}}

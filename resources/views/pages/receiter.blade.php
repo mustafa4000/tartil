@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title','Receiter')
 @section('content')
-<section class="section">
+<section class="section"> 
     <div class="row">
       <div class="section-body">
         <h4 style="color: #2F2F2F;">Receiter</h4>
@@ -14,8 +14,8 @@
             </div>
             <div class="mr-5">
               <a href="" style="color:#DCDCDC; font-size: 16px;"> Non Hafs A'n Assem </a>
-            </div>
-            <div class="">
+            </div>  
+            <div style="margin-left: 55rem;">
               <div class="btn-group dropleft">
                 <a type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="far fa-filter" style="color: #169E53;">Most Popular</i>  
@@ -28,23 +28,14 @@
               </div>
             </div>
           </div>
-                  
-          {{-- <div> --}}
-            <div class="row responsive">
-              {{-- {{ dd($reciters)}} --}}
-              @foreach ($reciters as $reciter)
-                <div class="col-2 w3-white w3-hover-shadow">
-                  <img class="card-img-top" class="img-rounded" src="{{ $reciter['image'] }}" width="132px" height="132px" style="border-radius: 8px; object-fit: cover;" alt="Card image cap">
-                  <div class="m-3 text-center">
-                    <div class="card-title">
-                      <a href="{{ route('reciters.show', ['slug' => $reciter->slug] ) }}" class="card-title" style="font-size: 11px; color:#2F2F2F; text-align: center;">dasdad</a>
-                    </div>
-                  </div>
-                </div>
                 
-              @endforeach
+          @foreach ($reciters as $reciter)
+            <div class="card" style="width: 11rem;">
+              <img src="{{ $reciter['image'] }}" class="card-img-top" class="img-rounded" width="132px" height="132px" class="card-img-top" style="border-radius: 8px; object-fit: cover;" alt="Card image cap">
+              <br>
+              <a href="{{ route('reciters.show', ['slug' => $reciter->slug] ) }}" style="font-size: 11px; color:#2F2F2F; text-align: center;">{{ $reciter->name }}</a>
             </div>
-          {{-- </div> --}}
+          @endforeach
       </div>  
     </div>
 </section>

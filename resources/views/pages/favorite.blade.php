@@ -29,7 +29,6 @@
         <tr>
           <th scope="row">
             <a type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              {{-- <i class="fas fa-play" style="color:#169E53;"></i>  --}}
               <img src="{{ url('/assets/img/Vector.png') }}" width="15" alt="">
             </a>
             <div class="dropdown-menu dropleft" x-placement="left-start" style="position: absolute; transform: translate3d(-202px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">

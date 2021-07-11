@@ -14,6 +14,7 @@ class ReciterController extends Controller
     public function index()
     {
         $reciters = Reciter::with(['reciter_riwayats', 'reciter_riwayats.reciter'])->orderBy('name', 'asc')->get();
+
         return view('reciters.index', compact('reciters'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -44,8 +45,8 @@ class ReciterController extends Controller
 
     public function show($slug)
     {
-        $reciter = Reciter::with(['reciter_riwayats.riwayats'])->where('slug', $slug)->first();
-        
+        $reciter = Reciter::with(['reciter_riwayats' , 'surahs', 'murotals'])->where('slug', $slug)->first();
+        // dd($reciter);    
         if (!$reciter) {
             return abort(404);
         }

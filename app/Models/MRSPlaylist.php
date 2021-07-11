@@ -14,11 +14,13 @@ class MRSPlaylist extends Model
         'murotal_reciter_surah_id' , 'playlist_id'
     ];
 
+    // many to many ke MRS
     public function murotal_reciter_surah()
     {   
         return $this->belongsToMany(MRS::class);
     }
     
+    //  many ke many ke playlists
     public function playlists()
     {   
         return $this->belongsToMany(Playlist::class);

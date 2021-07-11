@@ -33,9 +33,7 @@
                     </td>
                     <td>
                         <form action="{{ route('reciters.destroy',$reciter->id) }}" method="POST">
-            
                             {{-- <a class="btn btn-info" href="{{ route('reciters.show',$reciter->id) }}">Show</a> --}}
-            
                             {{-- <a class="btn btn-primary" href="{{ route('reciters.edit',$reciter->id) }}">Edit</a> --}}
             
                             @csrf
@@ -63,14 +61,10 @@
 
 <script>
   //message with toastr
-  @if(session()->has('success'))
-  
-      toastr.success('{{ session('success') }}', 'BERHASIL!'); 
-
-  @elseif(session()->has('error'))
-
-      toastr.error('{{ session('error') }}', 'GAGAL!'); 
-      
-  @endif
+    @if(session()->has('success'))
+        toastr.success('{{ session('success') }}', 'BERHASIL!'); 
+    @elseif(session()->has('error'))
+        toastr.error('{{ session('error') }}', 'GAGAL!'); 
+    @endif
 </script>
 @endpush

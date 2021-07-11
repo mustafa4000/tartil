@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Murotal;
+use App\Models\Playlist;
 use Illuminate\Http\Request;
 use App\Models\Reciter;
 use App\Models\Riwayat;
@@ -18,11 +20,14 @@ class DashboardController extends Controller
 
     public function index()
     {
+        $murotals = Murotal::all();
+        $playlists = Playlist::get();
+        // dd($murotals);
         $riwayats = Riwayat::all();
         $reciters = Reciter::all();
-        $surahs = Surah::with(['reciter_riwayats', 'reciter_riwayats.reciters'])->get();
-        
-        return view('dashboard', compact('reciters', 'surahs'));
+        $surahs = Surah::with(['reciters'])->get();        
+
+        return view('dashboard', compact('reciters', 'surahs', 'riwayats', 'playlists', 'murotals'));
     }
 
     // sidebar
@@ -48,12 +53,9 @@ class DashboardController extends Controller
 
     public function playlist()
     {
+        // $playlists = Playlist::with(['murotal_reciter_surah_playlists'])->get();
         return view('pages.playlist');
-    }
-
-    public function tambahan()
-    {
-        return view('pages.tambahan');
+        // , compact(['playlists'])
     }
 
     public function receiter()

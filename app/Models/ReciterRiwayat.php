@@ -11,17 +11,16 @@ class ReciterRiwayat extends Model
 
     protected $table = "reciter_riwayats";
     protected $fillable = [
-        'reciter_id' , 'riwayat_id'
+        'reciter_id', 'riwayat_id'
     ];
 
     public function reciters()
-    {   
+    {
         return $this->belongsToMany(Reciter::class);
     }
 
     public function riwayats()
-    {   
+    {
         return $this->belongsToMany(Riwayat::class);
     }
-
 }

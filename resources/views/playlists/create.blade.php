@@ -29,7 +29,7 @@
      <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Name:</strong>
+                <strong>Name Sura:</strong>
                 <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" placeholder="Name">
             </div>
 
@@ -41,7 +41,7 @@
             @enderror
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-success">Submit</button>
         </div>
     </div>
 </form>

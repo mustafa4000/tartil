@@ -26,9 +26,7 @@
             <td>{{ $riwayat->name }}</td>
             <td class="text-center">
                 <form action="{{ route('riwayats.destroy',$riwayat->id) }}" method="POST">
- 
-                    <a class="btn btn-info btn-sm" href="{{ route('riwayats.show',$riwayat->id) }}">Show</a>
- 
+                    <a class="btn btn-info btn-sm" href="{{ route('riwayats.show', ['slug' => $riwayat->slug] ) }}">Show</a>
                     <a class="btn btn-primary btn-sm" href="{{ route('riwayats.edit',$riwayat->id) }}">Edit</a>
  
                     @csrf
@@ -40,7 +38,6 @@
         </tr>
         @endforeach
     </table>
- 
     {!! $riwayats->links() !!}
     </div>
   </section>

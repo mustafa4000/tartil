@@ -27,11 +27,16 @@
       <!-- Main Content -->
       <div class="main-content" style="background: #fff;">
         @yield('content')
+        
       </div>
 
 {{-- /      footer --}}
       @include('includes.footer')
     </div>
+  </div>
+
+  <div id="playing">
+    a
   </div>
 
   @stack('before-script')

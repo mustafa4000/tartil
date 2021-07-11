@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Playlist;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class PlaylistController extends Controller
 {
@@ -14,7 +15,7 @@ class PlaylistController extends Controller
      */
     public function index()
     {
-        $playlists = Playlist::all();
+        $playlists = Playlist::with(['murotal_reciter_surah_playlists' , 'murotal_reciter_surah'])->orderBy('name', 'asc')->get();
         return view('playlists.index',compact('playlists'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -40,8 +41,9 @@ class PlaylistController extends Controller
             'name' => 'required',
         ]);
 
+        $request->merge(['slug' => Str::slug($request->name)]);
         Playlist::create($request->all());
-        return redirect()->route('playlists.index')->with('success','Post created successfully.');
+        return redirect()->route('playlists.index')->with('success','Berhasil.');
     }
 
     /**
@@ -50,8 +52,14 @@ class PlaylistController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Playlist $playlist)
+    public function show($slug)
     {
+        $playlist = Playlist::with(['murotal_reciter_surah_playlists'])->where('slug', $slug)->first();
+        // dd($playlist);    
+        if (!$playlist) {
+            return abort(404);
+        }
+
         return view('playlists.show',compact('playlist'));
     }
 
@@ -80,7 +88,7 @@ class PlaylistController extends Controller
         ]);
         
         $playlist->update($request->all());
-        return redirect()->route('playlists.index')->with('success','Post updated successfully');
+        return redirect()->route('playlists.index')->with('success','Updated Berhasil.');
     }
 
     /**
@@ -92,6 +100,6 @@ class PlaylistController extends Controller
     public function destroy(Playlist $playlist)
     {
         $playlist->delete();
-        return redirect()->route('playlists.index')->with('success','Post deleted successfully');
+        return redirect()->route('playlists.index')->with('success','Berhasil di hapus.');
     }
 }

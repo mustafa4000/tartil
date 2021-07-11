@@ -17,7 +17,7 @@
         <table class="table table-bordered">
             <tr>
                 <th width="20px" class="text-center">No</th>
-                <th scope="col">Name</th>
+                <th scope="col">Name Sura</th>
                 <th width="280px"class="text-center">Action</th>
             </tr>
             @forelse ($playlists as $playlist)
@@ -26,7 +26,7 @@
                     <td>{{ $playlist->name }}</td>
                     <td class="text-center">
                         <form action="{{ route('playlists.destroy',$playlist->id) }}" method="POST">
-                            <a class="btn btn-info btn-sm" href="{{ route('playlists.show',$playlist->id) }}">Show</a>
+                            <a class="btn btn-info btn-sm" href="{{ route('playlists.show', ['slug' => $playlist->slug] ) }}">Show</a>
                             <a class="btn btn-primary btn-sm" href="{{ route('playlists.edit',$playlist->id) }}">Edit</a>
 
                             @csrf

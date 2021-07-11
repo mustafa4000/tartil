@@ -1,13 +1,9 @@
 <?php
 
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\UserController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\PostController;
-use App\Http\Controllers\TableController;
 use App\Http\Controllers\ReciterController;
 use App\Http\Controllers\MurotalController;
 use App\Http\Controllers\SurahController;
@@ -46,17 +42,15 @@ Route::group(['middleware' => 'auth'], function () {
     Route::patch('profile', [ProfileController::class, 'update'])->name('profile.update');
 
     Route::middleware(['admin'])->group(function () {
-        Route::get('admin', [AdminController::class, 'index']);        
         Route::resource('reciters', ReciterController::class)->except('show');
-        Route::resource('homes', TableController::class)->except('show');
-        Route::resource('surahs', SurahController::class);
-        Route::resource('riwayats', RiwayatController::class);
-        Route::resource('murotals', MurotalController::class);
-        Route::resource('posts', PostController::class);
+        Route::resource('surahs', SurahController::class)->except('show');
+        Route::resource('riwayats', RiwayatController::class)->except('show');
+        Route::resource('murotals', MurotalController::class)->except('show');
+        Route::resource('playlists', PlaylistController::class)->except('show');
     });
-    
+        
     Route::middleware(['user'])->group(function () {
-        Route::get('user', [UserController::class, 'index']);
+
     });
 
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
@@ -66,9 +60,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('tambahan', [DashboardController::class, 'tambahan'])->name('pages.tambahan');
     Route::get('receiter', [DashboardController::class, 'receiter'])->name('pages.receiter');
 
-    Route::get('homes/{slug}', [TableController::class, 'show'])->name('homes.show');
     Route::get('reciters/{slug}', [ReciterController::class, 'show'])->name('reciters.show');
-    Route::get('surah/{slug}', [SurahController::class, 'show'])->name('surah.show');
-
-    Route::resource('playlists', PlaylistController::class);
+    Route::get('surahs/{slug}', [SurahController::class, 'show'])->name('surah.show');
+    Route::get('murotals/{slug}', [MurotalController::class, 'show'])->name('murotals.show');
+    Route::get('playlists/{slug}', [PlaylistController::class, 'show'])->name('playlists.show');
+    Route::get('riwayats/{slug}', [RiwayatController::class, 'show'])->name('riwayats.show');
 });

@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Reciter;
 use App\Models\Riwayat;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class RiwayatController extends Controller
 {
@@ -39,9 +41,9 @@ class RiwayatController extends Controller
         $request->validate([
             'name' => 'required',
         ]);
-
+        $request->merge(['slug' => Str::slug($request->name)]);
         Riwayat::create($request->all());
-        return redirect()->route('riwayats.index')->with('success','Post created successfully.');
+        return redirect()->route('riwayats.index')->with('success','Berhasil.');
     }
 
     /**
@@ -50,8 +52,14 @@ class RiwayatController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Riwayat $riwayat)
+    public function show($slug)
     {
+        $riwayat = Riwayat::where('slug', $slug)->first();
+        // dd($reciter);    
+        if (!$riwayat) {
+            return abort(404);
+        }
+
         return view('riwayats.show',compact('riwayat'));
     }
 
@@ -80,7 +88,7 @@ class RiwayatController extends Controller
         ]);
 
         $riwayat->update($request->all());
-        return redirect()->route('riwayats.index')->with('success','Post updated successfully');
+        return redirect()->route('riwayats.index')->with('success','Updated Berhasil.');
     }
 
     /**
@@ -92,6 +100,6 @@ class RiwayatController extends Controller
     public function destroy(Riwayat $riwayat)
     {
         $riwayat->delete();
-        return redirect()->route('riwayats.index')->with('success','Post deleted successfully');
+        return redirect()->route('riwayats.index')->with('success','Berhasil di hapus.');
     }
 }

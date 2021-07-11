@@ -17,7 +17,7 @@
     <table class="table table-bordered">
         <tr>
             <th width="20px" class="text-center">No</th>
-            <th scope="col">Name</th>
+            <th scope="col">Name Sura</th>
             <th scope="col">File</th>
             <th width="280px"class="text-center">Action</th>
         </tr>
@@ -28,9 +28,7 @@
                 <td>{{ $murotal->file }}</td>
                 <td class="text-center">
                     <form action="{{ route('murotals.destroy',$murotal->id) }}" method="POST">
-
-                        <a class="btn btn-info btn-sm" href="{{ route('murotals.show',$murotal->id) }}">Show</a>
-
+                        {{-- <a class="btn btn-info btn-sm" href="{{ route('murotals.show', ['slug' => $murotal->slug] ) }}}">Show</a> --}}
                         <a class="btn btn-primary btn-sm" href="{{ route('murotals.edit',$murotal->id) }}">Edit</a>
 
                         @csrf
@@ -46,7 +44,6 @@
             </div>
         @endforelse
     </table>
-
     {{-- {!! $murotals->links() !!} --}}
   </div>
 </section>

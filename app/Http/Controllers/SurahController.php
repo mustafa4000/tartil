@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Reciter;
+use App\Models\Riwayat;
 use App\Models\Surah;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -16,7 +18,6 @@ class SurahController extends Controller
     public function index()
     {
         $surahs = Surah::with(['reciter_riwayats', 'reciter_riwayats.reciter'])->orderBy('no', 'asc')->get();
-        // dd($surahs);
         return view('surahs.index', compact('surahs'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -59,14 +60,14 @@ class SurahController extends Controller
      */
     public function show($slug)
     {
-
-        $surah = Surah::where('slug', $slug)->first();
-
+        $surah = Surah::with(['reciters', 'murotals', 'reciters.riwayats'])->where('slug', $slug)->first();
+        $riwayat = Riwayat::where('slug', $slug)->get();
+        // dd($surahs);
         if (!$surah) {
             return abort(404);
         }
 
-        return view('surahs.show', compact('surah'));
+        return view('surahs.show', compact('surah', 'riwayat'));
     }
 
     /**
@@ -97,7 +98,7 @@ class SurahController extends Controller
 
         $surah->update($request->all());
 
-        return redirect()->route('surahs.index')->with('success', 'Berhasil.');
+        return redirect()->route('surahs.index')->with('success', 'Update Berhasil.');
     }
 
     /**
