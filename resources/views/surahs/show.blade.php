@@ -69,7 +69,7 @@
                   </a>
                 </div>
                 <div class="btn-group dropleft col">
-                  <a type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a href="{{ route('pages.favorite') }}">
                     <i class="far fa-star" style="color: #2F2F2F;"></i>
                   </a>
                   <div class="dropdown-menu dropleft" x-placement="left-start" style="position: absolute; transform: translate3d(-202px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">

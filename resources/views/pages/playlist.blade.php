@@ -41,7 +41,7 @@
         {{-- {{ $reciter->name }} --}}
         <td> <a href="" style="font-size: 16px; color:#2F2F2F">  </a></td> 
         {{-- {{ $riwayat->name }} --}}
-        <td class="row">
+        <td class="row align-items-center">
           <div class="btn-group dropleft col">
             <a type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fas fa-align-justify" style="color: #2F2F2F;"></i> 

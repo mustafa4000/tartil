@@ -64,7 +64,7 @@
                 </a>
               </div>
               <div class="btn-group dropleft col">
-                <a href="#">
+                <a href="{{ route('pages.favorite') }}">
                   <i class="far fa-star" style="color: #2F2F2F;"></i>
                 </a>
               </div>

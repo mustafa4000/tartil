@@ -51,7 +51,7 @@
           <td><a href="" style="font-size: 16px; color:#2F2F2F">Al-Fatihah (The Opener)</a></td>
           <td> <a href="" style="font-size: 16px; color:#2F2F2F">Abdallah Kamel</a></td>
           <td> <a href="" style="font-size: 16px; color:#2F2F2F">Hafs A'n Assem</a></td>
-          <td class="row">
+          <td class="row align-items-center">
             <div class="col-10">
               <span>0:00:00</span>
             </div>

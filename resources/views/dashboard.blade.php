@@ -13,8 +13,7 @@
             <thead>
                 <tr>
                     <th scope="col col-sm-1" style="color: #9D9D9D; background: white;"></th>
-                    <th scope="col col-sm-1" style="color: #9D9D9D; background: white;">Sura Name
-                    </th>
+                    <th scope="col col-sm-1" style="color: #9D9D9D; background: white;">Sura Name</th>
                     <th scope="col col-sm-1" style="color: #9D9D9D; background: white;">Reciter</th>
                     <th scope="col col-sm-1" style="color: #9D9D9D; background: white;">Rewayat</th>
                     <th scope="col col-sm-1" style="color: #9D9D9D; background: white;">Duraiton
@@ -83,7 +82,7 @@
                         </div>
                         @endforeach
                         <div class="btn-group dropleft col">
-                            <a href="">
+                            <a href="{{ route('pages.favorite') }}">
                                 <i class="far fa-star" style="color: #2F2F2F;"></i>
                             </a>
                         </div>
