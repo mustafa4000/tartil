@@ -3,19 +3,44 @@
 <head>
   @include('includes.meta')
   <title> @yield('title') | Dashboard</title>
-
+  <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>    
+  
     @stack('before-style')
     {{-- style css --}}
     @include('includes.style')
     @stack('after-style')
 
-    
+    <style type="text/css">
+      .preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background-color: #fff; 
+      }
+      .preloader .loading {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        font: 14px arial;
+      }
+    </style>
 </head>
 
 <body>
   <div id="app">
     <div class="main-wrapper">
       <div class="navbar-bg"></div>
+      <div class="preloader">
+        <div class="loading">
+          <img src="{{ url('/assets/img/load.gif') }}">
+          <p>Harap Tunggu</p>
+        </div>
+      </div>
+      
       @include('sweetalert::alert')
       {{-- header / navbar --}}
       @include('includes.header')
@@ -40,6 +65,11 @@
   </div>
 
   @stack('before-script')
+  <script>
+    $(document).ready(function(){
+    $(".preloader").fadeOut();
+    })
+  </script>
 
   <!-- General JS Scripts -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

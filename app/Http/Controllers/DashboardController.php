@@ -63,4 +63,9 @@ class DashboardController extends Controller
         $reciters = Reciter::with(['reciter_riwayats', 'reciter_riwayats.reciter', 'riwayats'])->orderBy('name', 'asc')->get();
         return view('pages.receiter', compact(['reciters']));
     }
+
+    public function languageDemo(){
+        return view('languageDemo');
+    }
+
 }

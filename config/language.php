@@ -4,12 +4,12 @@ return [
         'display' => 'English',
         'flag-icon' => 'us'
     ],
-    'fr' => [
-        'display' => 'Français',
-        'flag-icon' => 'fr'
+    'id' => [
+        'display' => 'Indonesia',
+        'flag-icon' => 'id'
     ],
-    'es' => [
-        'display' => 'Spanish',
-        'flag-icon' => 'es'
+    'ar' => [
+        'display' => 'Arab Saudi',
+        'flag-icon' => 'ar'
     ],
 ];

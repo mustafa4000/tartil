@@ -9,9 +9,10 @@ use App\Http\Controllers\MurotalController;
 use App\Http\Controllers\SurahController;
 use App\Http\Controllers\RiwayatController;
 use App\Http\Controllers\PlaylistController;
+use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
-use App\Http\Controllers\LocalizationController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +41,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('donate', [DashboardController::class, 'donate'])->name('pages.donate.index');
     Route::get('profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('profile', [ProfileController::class, 'update'])->name('profile.update');
+
+    Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => [LanguageController::class, 'switchLang']]);
+    Route::get('/languageDemo', [DashboardController::class, 'languageDemo']);
 
     Route::middleware(['admin'])->group(function () {
         Route::resource('reciters', ReciterController::class)->except('show');
