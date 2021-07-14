@@ -36,7 +36,7 @@
       <div class="navbar-bg"></div>
       <div class="preloader">
         <div class="loading">
-          <img src="{{ url('/assets/img/load.gif') }}">
+          <img src="{{ url('/assets/img/load.gif') }}" width="100">
           <p>Harap Tunggu</p>
         </div>
       </div>

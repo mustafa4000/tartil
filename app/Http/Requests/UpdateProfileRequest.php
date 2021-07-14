@@ -30,10 +30,6 @@ class UpdateProfileRequest extends FormRequest
             'name' => [
                 'required', 'string', 'max:255'
             ],
-            // 'username' => [
-            //     'required', 'string', 'max:255',
-            //     Rule::unique('users', 'username')->ignore(Auth::user()->id)
-            // ],
             'email' => [
                 'required', 'email', 'max:255',
                 Rule::unique('users', 'email')->ignore(Auth::user()->id)

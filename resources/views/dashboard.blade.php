@@ -1,6 +1,12 @@
 @extends('layouts.app')
 
-@section('content')    
+@push('after-style')
+    
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+
+@endpush
+
+@section('content')  
 <!-- Main Content -->
 <section class="section">
     <div class="section-body">
@@ -160,12 +166,10 @@
                     </a>
                 </div>
             </div>
-            <div class="row responsive">
+            <div class="slider">
                 @foreach ($reciters as $reciter)
-                <div class="col-2 w3-white w3-hover-shadow">
-                    <img class="card-img-top" class="img-rounded" src="{{ $reciter->image_url }}"
-                        width="132px" height="132px" style="border-radius: 8px; object-fit: cover;"
-                        alt="Card image cap">
+                <div class="card w3-white w3-hover-shadow" style="width: 18rem;">
+                    <img src="{{ $reciter->image_url }}" class="card-img-top" alt="...">
                     <div class="m-3 text-center">
                         <div class="card-title">
                             <a href="{{ route('reciters.show', ['slug' => $reciter->slug] ) }}"
@@ -174,8 +178,8 @@
                         </div>
                     </div>
                 </div>
-                @endforeach
-            </div>
+                @endforeach 
+            </div>    
         </div>
         <div>
             <div class="col">
@@ -211,3 +215,19 @@
     </div>    
 </section>
 @endsection
+
+@push('after-script')
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $('.slider').slick({
+            autoplay: true,
+            autoplaySpeed: 2500,
+            arrows: false,
+            slidesToShow: 7,
+            slidesToScroll: 1,
+        });
+    });
+</script>
+@endpush

@@ -13,7 +13,6 @@ use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes

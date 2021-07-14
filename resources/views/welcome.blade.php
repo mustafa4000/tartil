@@ -220,7 +220,7 @@
                   <td><a href="" style="font-size: 16px; color:#2F2F2F">Al-Fatiha( The Opener )</a></td>
                   <td> <a href="" style="font-size: 16px; color:#2F2F2F">Abdallah Kamel</a></td>
                   <td> <a href="" style="font-size: 16px; color:#2F2F2F">Hafs A'n Assem</a></td>
-                  <td class="row">
+                  <td class="row align-items-center">
                     <a href="" class="col" style="color: #2F2F2F;"><i class="fas fa-align-justify"></i></a>   
                     <a href="" class="col" style="color: #2F2F2F;"><i class="far fa-star"></i></a>
                     <a href="" class="col" style="color: #2F2F2F;"><i class="far fa-ellipsis-h"></i></a>
@@ -231,7 +231,7 @@
                   <td><a href="" style="font-size: 16px; color:#2F2F2F">Al-Maidah( The Table Spread )</a></td>
                   <td><a href="" style="font-size: 16px; color:#2F2F2F">Abdel Aziz Al Ahmed</a></td>
                   <td><a href="" style="font-size: 16px; color:#2F2F2F">Hafs A'n Assem</a></td>
-                  <td class="row">
+                  <td class="row align-items-center">
                     <a href="" class="col" style="color: #2F2F2F;"><i class="fas fa-align-justify"></i></a>   
                     <a href="" class="col" style="color: #2F2F2F;"><i class="far fa-star"></i></a>
                     <a href="" class="col" style="color: #2F2F2F;"><i class="far fa-ellipsis-h"></i></a>
@@ -242,7 +242,7 @@
                   <td><a href="" style="font-size: 16px; color:#2F2F2F">Al-Kahf( The Cave )</a></td>
                   <td><a href="" style="font-size: 16px; color:#2F2F2F">Jamal Shaker Abdullah</a></td>
                   <td><a href="" style="font-size: 16px; color:#2F2F2F">Hafs A'n Assem</a></td>
-                  <td class="row">
+                  <td class="row align-items-center">
                     <a href="" class="col" style="color: #2F2F2F;"><i class="fas fa-align-justify"></i></a>   
                     <a href="" class="col" style="color: #2F2F2F;"><i class="far fa-star"></i></a>
                     <a href="" class="col" style="color: #2F2F2F;"><i class="far fa-ellipsis-h"></i></a>
@@ -253,7 +253,7 @@
                   <td><a href="" style="font-size: 16px; color:#2F2F2F">Al-Rahman( The Beneficent )</a></td>
                   <td><a href="" style="font-size: 16px; color:#2F2F2F">Mohammad Saleh Alim Shah</a></td>
                   <td><a href="" style="font-size: 16px; color:#2F2F2F">Hafs A'n Assem</a></td>
-                  <td class="row">
+                  <td class="row align-items-center">
                     <a href="" class="col" style="color: #2F2F2F;"><i class="fas fa-align-justify"></i></a>   
                     <a href="" class="col" style="color: #2F2F2F;"><i class="far fa-star"></i></a>
                     <a href="" class="col" style="color: #2F2F2F;"><i class="far fa-ellipsis-h"></i></a>
