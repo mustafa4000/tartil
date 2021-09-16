@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Web;
 
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use App\Models\Reciter;
 use App\Models\Riwayat;
-use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\Storage;
@@ -78,7 +79,7 @@ class ReciterController extends Controller
         $reciter->name = $request->name;
         $reciter->save;
 
-        return redirect()->route('reciters.index')->with('success', 'Berhasil.');
+        return redirect()->route('admin.reciters.index')->with('success', 'Berhasil.');
     }
 
     public function destroy(Reciter $reciter)

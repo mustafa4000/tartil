@@ -1,24 +1,24 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Web;
 
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use App\Models\Reciter;
 use App\Models\Riwayat;
-use App\Models\Surah;
-use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
-class SurahController extends Controller
+class RiwayatController extends Controller
 {
-    /**
+        /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $surahs = Surah::with(['reciter_riwayats', 'reciter_riwayats.reciter'])->orderBy('no', 'asc')->get();
-        return view('surahs.index', compact('surahs'))->with('i', (request()->input('page', 1) - 1) * 5);
+        $riwayats = Riwayat::with(['reciter_riwayats'])->paginate(5);
+        return view('riwayats.index',compact('riwayats'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -28,7 +28,7 @@ class SurahController extends Controller
      */
     public function create()
     {
-        return view('surahs.create');
+        return view('riwayats.create');
     }
 
     /**
@@ -41,15 +41,10 @@ class SurahController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'translate' => 'required',
-            'arab' => 'required',
         ]);
-        // dd(Str::slug($request->name));
         $request->merge(['slug' => Str::slug($request->name)]);
-        // dd($request->all());
-        Surah::create($request->all());
-
-        return redirect()->route('surahs.index')->with('success', 'Berhasil.');
+        Riwayat::create($request->all());
+        return redirect()->route('riwayats.index')->with('success','Berhasil.');
     }
 
     /**
@@ -60,14 +55,13 @@ class SurahController extends Controller
      */
     public function show($slug)
     {
-        $surah = Surah::with(['reciters', 'murotals', 'reciters.riwayats'])->where('slug', $slug)->first();
-        $riwayat = Riwayat::where('slug', $slug)->get();
-        // dd($surahs);
-        if (!$surah) {
+        $riwayat = Riwayat::where('slug', $slug)->first();
+        // dd($reciter);    
+        if (!$riwayat) {
             return abort(404);
         }
 
-        return view('surahs.show', compact('surah', 'riwayat'));
+        return view('riwayats.show',compact('riwayat'));
     }
 
     /**
@@ -76,9 +70,9 @@ class SurahController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Surah $surah)
+    public function edit(Riwayat $riwayat)
     {
-        return view('surahs.edit', compact('surah'));
+        return view('riwayats.edit',compact('riwayat'));
     }
 
     /**
@@ -88,17 +82,14 @@ class SurahController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Surah $surah)
+    public function update(Request $request, Riwayat $riwayat)
     {
         $request->validate([
             'name' => 'required',
-            'translate' => 'required',
-            'arab' => 'required',
         ]);
 
-        $surah->update($request->all());
-
-        return redirect()->route('surahs.index')->with('success', 'Update Berhasil.');
+        $riwayat->update($request->all());
+        return redirect()->route('riwayats.index')->with('success','Updated Berhasil.');
     }
 
     /**
@@ -107,10 +98,9 @@ class SurahController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Surah $surah)
+    public function destroy(Riwayat $riwayat)
     {
-        $surah->delete();
-
-        return redirect()->route('surahs.index')->with('success', 'Berhasil di hapus.');
+        $riwayat->delete();
+        return redirect()->route('riwayats.index')->with('success','Berhasil di hapus.');
     }
 }

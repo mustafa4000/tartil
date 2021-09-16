@@ -23,7 +23,7 @@
             @forelse ($reciters as $reciter)
                 <tr>
                     <td>{{ ++$i }}</td>
-                    <td><img src="{{ $reciter->image_url }}" width="100px"></td>
+                    <td><img src="{{ $reciter->image_url }}" class="w-10 h-100 object-fit-cover rounded-full""></td>
                     <td><a href="{{ route('reciters.show', ['slug' => $reciter->slug] ) }}" style="font-size: 14px; color:#2F2F2F;"><p class="text-center">{{  $reciter->name  }}</p> </a></td>
                     <td>  
                         <a href="" style="font-size: 14px; color:#2F2F2F;"><p class="text-center">{{ $reciter->country }}</p> </a>
@@ -33,8 +33,8 @@
                     </td>
                     <td>
                         <form action="{{ route('reciters.destroy',$reciter->id) }}" method="POST">
-                            {{-- <a class="btn btn-info" href="{{ route('reciters.show',$reciter->id) }}">Show</a> --}}
-                            {{-- <a class="btn btn-primary" href="{{ route('reciters.edit',$reciter->id) }}">Edit</a> --}}
+                            {{-- <a class="btn btn-info" href="{{ route('reciters.show',$reciter->id) }}">Show</a>
+                            <a class="btn btn-primary" href="{{ route('reciters.edit',$reciter->id) }}">Edit</a> --}}
             
                             @csrf
                             @method('DELETE')

@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Blank Page &mdash; Stisla</title>
+  <title></title>
 
   <!-- General CSS Files -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -141,12 +140,19 @@
           @if (Route::has('login'))
             <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
               <div class="row">
-                <div class="mr-3">
-                  <a href="" style="color:#2F2F2F;"> <i class="far fa-donate">Donate</i></a>   
+                <div class="mr-3">  
+                  <a href="" style="color:#2F2F2F;">
+                    <i class="far fa-donate" style="width: 18px"></i>  
+                    <b class="mr-2" style="font-size: 18px">Donasi</b> 
+                  </a>
                 </div>
                 <div class="mr-3">
-                  <a href="" style="color:#2F2F2F;"> <i class="far fa-globe">EN</i></a>   
+                  <a href="" style="color:#2F2F2F;"> 
+                    <i class="far fa-globe" style="width: 18px"></i> 
+                    <b class="mr-2" style="font-size: 18px">EN</b> 
+                  </a>                   
                 </div>
+
                 <div class="mr-3"> 
                   @auth
                     <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline ml-3" style="color:#2F2F2F;">Home</a>
@@ -173,19 +179,19 @@
           </div>
             <ul class="sidebar-menu active">
               <li class="nav-item dropdown">
-                <a href="#"><i class="fas fa-home fa-2x" style="color:#5CBB87;"></i><span style="color:#5CBB87; font-size: 16px;">Home</span></a>
+                <a href="#"><i class="fas fa-home" style="color:#5CBB87;"></i><span style="color:#5CBB87; font-size: 16px;">Home</span></a>
               </li>
               <li class="nav-item dropdown">
-                <a href="#"><i class="fas fa-star fa-2x" style="color:#5CBB87;"></i><span style="color:#5CBB87; font-size: 16px;">Favorite</span></a>
+                <a href="#"><i class="fas fa-star" style="color:#5CBB87;"></i><span style="color:#5CBB87; font-size: 16px;">Favorite</span></a>
               </li>
               <li class="nav-item dropdown">
-                <a href="#"><i class="fas fa-user fa-2x" style="color:#5CBB87;"></i><span style="color:#5CBB87; font-size: 16px;">Reciter</span></a>
+                <a href="#"><i class="fas fa-user" style="color:#5CBB87;"></i><span style="color:#5CBB87; font-size: 16px;">Reciter</span></a>
               </li>
               <li class="nav-item dropdown">
-                <a href="#"><i class="fas fa-book-open fa-2x" style="color:#5CBB87;"></i><span style="color:#5CBB87; font-size: 16px;">Alquran</span></a>
+                <a href="#"><i class="fas fa-book-open" style="color:#5CBB87;"></i><span style="color:#5CBB87; font-size: 16px;">Alquran</span></a>
               </li>
               <li class="nav-item dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-align-justify fa-2x" style="color:#5CBB87;"></i> <span style="color:#5CBB87; font-size: 16px;">Playlist</span></a>
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-align-justify" style="color:#5CBB87;"></i> <span style="color:#5CBB87; font-size: 16px;">Playlist</span></a>
                 <ul class="dropdown-menu active">
                   <li><a class="nav-link" href="bootstrap-alert.html">Playlist 1 </a></li>
                   <li><a class="nav-link" href="bootstrap-badge.html">For Today</a></li>
@@ -262,67 +268,102 @@
               </tbody>
             </table>
 
-            <div>
-              <h5 style="color: #2F2F2F">Most Popular Reciter</h5>
-              <a href=""> <p style="text-align: end; color:#169E53;">See all</p> </a>
-                <div class="card-deck">
-                  <div class="card">
-                    <img class="card-img-top"  class="img-rounded" src="{{ url('/assets/imgtartil/abdul_muhsin.jpg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
-                    <div class="card-body">
-                      <div class="mr-1">
-                        <a href="" style="font-size: 14px; color:#2F2F2F;"><p class="">Abdul Muhsin Al Qasim</p> </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/abdul_rahman.jpeg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
-                    <div class="card-body">
-                      <div class="card-title">
-                        <a href="" style="font-size: 14px; color:#2F2F2F; text-align: center;">Abdul Rahman Al Yusuf</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/abdulraman.jpg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
-                    <div class="card-body">
-                      <div class="card-title">
-                        <a href="" style="font-size: 14px; color:#2F2F2F; text-align: center;">Abdul Rahman Jamal Aloosi</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/abdulhaneef.jpg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
-                    <div class="card-body">
-                      <div class="card-title">
-                        <a href="" style="font-size: 14px; color:#2F2F2F; text-align: center;">Abdul Wadood Haneef</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/abdulwali.jpeg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
-                    <div class="card-body">
-                      <div class="card-title">
-                        <a href="" style="font-size: 14px; color:#2F2F2F; text-align: center;">Abdul Wali Al Arkani</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/abdulkabir.jpg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
-                    <div class="card-body">
-                      <div class="card-title">
-                        <a href="" style="font-size: 14px; color:#2F2F2F; text-align: center;">Abdulkabir Al Hadidi</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/Abdullah_al_buraimi.jpeg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
-                    <div class="card-body">
-                      <div class="card-title">
-                        <a href="" style="font-size: 14px; color:#2F2F2F; text-align: center;">Abdullah Al Buraimi</a>
-                      </div>
-                    </div>
-                  </div>
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <h5 style="color: #2F2F2F">Most Popular Reciter</h5>
                 </div>
+                <div class="col">
+                  <a href=""> <p style="text-align: end; color:#169E53;">See all</p> </a>
+                </div>
+              </div>
+              
+              <div class="row justify-align-center">
+                  <div class="col-md-2">
+                    <div class="card w3-white w3-hover-shadow" style="width: 10rem;">
+                      <img class="card-img-top"  class="img-rounded" src="{{ url('/assets/imgtartil/abdul_muhsin.jpg') }}" style="border-radius: 8px;" alt="Card image cap">
+                      <div class="m-3 text-center">
+                        <div class="card-title">
+                            <a href=""
+                                style="font-size: 11px; color:#2F2F2F; text-align: center;">Abdul Muhsin Al Qasim
+                            </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="card w3-white w3-hover-shadow" style="width: 10rem;">
+                      <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/abdul_rahman.jpeg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
+                      <div class="m-3 text-center">
+                        <div class="card-title">
+                            <a href=""
+                                style="font-size: 11px; color:#2F2F2F; text-align: center;">Abdul Rahman Al Yusuf
+                            </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="card w3-white w3-hover-shadow" style="width: 10rem;">
+                      <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/abdulraman.jpg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
+                      <div class="m-3 text-center">
+                        <div class="card-title">
+                            <a href=""
+                                style="font-size: 11px; color:#2F2F2F; text-align: center;">Abdul Rahman Jamal Aloosi
+                            </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="card w3-white w3-hover-shadow" style="width: 10rem;">
+                      <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/abdulhaneef.jpg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
+                      <div class="m-3 text-center">
+                        <div class="card-title">
+                            <a href=""
+                                style="font-size: 11px; color:#2F2F2F; text-align: center;">Abdul Wadood Haneef
+                            </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="card w3-white w3-hover-shadow" style="width: 10rem;">
+                      <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/abdulwali.jpeg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
+                      <div class="m-3 text-center">
+                        <div class="card-title">
+                            <a href=""
+                                style="font-size: 11px; color:#2F2F2F; text-align: center;">Abdul Wali Al Arkani
+                            </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                      <div class="card w3-white w3-hover-shadow" style="width: 10rem;">
+                      <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/abdulkabir.jpg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
+                      <div class="m-3 text-center">
+                        <div class="card-title">
+                            <a href=""
+                                style="font-size: 11px; color:#2F2F2F; text-align: center;">Abdulkabir Al Hadidi
+                            </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {{-- <div class="col-md-2">
+                      <div class="card w3-white w3-hover-shadow" style="width: 10rem;">
+                      <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/Abdullah_al_buraimi.jpeg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
+                      <div class="m-3 text-center">
+                        <div class="card-title">
+                            <a href=""
+                                style="font-size: 11px; color:#2F2F2F; text-align: center;">Abdullah Al Buraimi
+                            </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div> --}}
+              </div>
             </div>
 
             <div>
@@ -2415,7 +2456,7 @@
       </div>
       <footer class="main-footer">
         <div class="footer-left">
-          <b>2021</b>  <div class="bullet"></div> <a href="https://nauval.in/"></a>
+          <b>2021</b> 
         </div>
         <div class="footer-right">
            <b>QODR</b> 

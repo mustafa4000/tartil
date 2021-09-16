@@ -15,7 +15,7 @@
             <div class="mr-5">
               <a href="" style="color:#DCDCDC; font-size: 16px;"> Non Hafs A'n Assem </a>
             </div>  
-            <div style="margin-left: 55rem;">
+            <div style="margin-left: 29rem;">
               <div class="btn-group dropleft">
                 <a type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="far fa-filter" style="color: #169E53;">Most Popular</i>  
@@ -29,13 +29,15 @@
             </div>
           </div>
                 
-          @foreach ($reciters as $reciter)
-            <div class="card" style="width: 11rem;">
-              <img src="{{ $reciter['image'] }}" class="card-img-top" class="img-rounded" width="132px" height="132px" class="card-img-top" style="border-radius: 8px; object-fit: cover;" alt="Card image cap">
-              <br>
-              <a href="{{ route('reciters.show', ['slug' => $reciter->slug] ) }}" style="font-size: 11px; color:#2F2F2F; text-align: center;">{{ $reciter->name }}</a>
-            </div>
-          @endforeach
+          <div class="container row">
+            @foreach ($reciters as $reciter)
+              <div class="card" style="width: 11rem;">
+                <img src="{{ $reciter['image'] }}" class="card-img-top" class="img-rounded" width="132px" height="132px" class="card-img-top" style="border-radius: 8px; object-fit: cover;" alt="Card image cap">
+                <br>
+                <a href="{{ route('reciters.show', ['slug' => $reciter->slug] ) }}" style="font-size: 11px; color:#2F2F2F; text-align: center;">{{ $reciter->name }}</a>
+              </div>
+            @endforeach
+          </div>
       </div>  
     </div>
 </section>

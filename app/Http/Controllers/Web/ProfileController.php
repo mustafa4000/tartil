@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Web;
 
-use App\Http\Requests\UpdateProfileRequest;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Requests\UpdateProfileRequest;
 
 class ProfileController extends Controller
 {
@@ -22,5 +23,4 @@ class ProfileController extends Controller
 
         return redirect()->route('dashboard')->with('success','Berhasil');
     }
-
 }

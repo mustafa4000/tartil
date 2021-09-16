@@ -18,12 +18,10 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col col-sm-1" style="color: #9D9D9D; background: white;"></th>
                     <th scope="col col-sm-1" style="color: #9D9D9D; background: white;">Sura Name</th>
                     <th scope="col col-sm-1" style="color: #9D9D9D; background: white;">Reciter</th>
                     <th scope="col col-sm-1" style="color: #9D9D9D; background: white;">Rewayat</th>
-                    <th scope="col col-sm-1" style="color: #9D9D9D; background: white;">Duraiton
-                    </th>
+                    <th scope="col col-sm-1" style="color: #9D9D9D; background: white;">Duraiton</th>
                 </tr>
             </thead>
             <tbody>
@@ -87,6 +85,11 @@
                             </a>
                         </div>
                         @endforeach
+                        <div class="btn-group dropleft col">
+                            <a href="">
+                                <i class="fas fa-align-justify" style="color: #2F2F2F;"></i>
+                            </a>
+                        </div>
                         <div class="btn-group dropleft col">
                             <a href="{{ route('pages.favorite') }}">
                                 <i class="far fa-star" style="color: #2F2F2F;"></i>

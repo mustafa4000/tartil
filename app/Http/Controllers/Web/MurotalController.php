@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Web;
 
-use App\Models\Murotal;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Murotal;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Collection;
 use App\File;
@@ -12,7 +13,7 @@ use Illuminate\Support\Facades\Storage;
 
 class MurotalController extends Controller
 {
-    /**
+        /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response

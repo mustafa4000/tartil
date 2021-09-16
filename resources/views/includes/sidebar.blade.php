@@ -7,19 +7,19 @@
   </div>
   <ul class="sidebar-menu">
     <li class="nav-item dropdown">
-      <a href="{{ route('dashboard') }}"><i class="fas fa-home fa-2x" style="color:#5CBB87;"></i><span style="color:#5CBB87; font-size: 16px;">Home</span></a>
+      <a href="{{ route('dashboard') }}"><i class="fas fa-home" style="color:#5CBB87;"></i><span style="color:#5CBB87; font-size: 16px;">Home</span></a>
     </li>
     <li class="nav-item dropdown">
-      <a href="{{ route('pages.favorite') }}"><i class="fas fa-star fa-2x" style="color:#5CBB87;"></i><span style="color:#5CBB87; font-size: 16px;">Favorite</span></a>
+      <a href="{{ route('pages.favorite') }}"><i class="fas fa-star" style="color:#5CBB87;"></i><span style="color:#5CBB87; font-size: 16px;">Favorite</span></a>
     </li>
     <li class="nav-item dropdown">
-      <a href="{{ route('pages.receiter') }}"><i class="fas fa-user fa-2x" style="color:#5CBB87;"></i><span style="color:#5CBB87; font-size: 16px;">Reciter</span></a>
+      <a href="{{ route('pages.receiter') }}"><i class="fas fa-user" style="color:#5CBB87;"></i><span style="color:#5CBB87; font-size: 16px;">Reciter</span></a>
     </li>
     <li class="nav-item dropdown">
-      <a href="{{ route('pages.alquran') }}"><i class="fas fa-book-open fa-2x" style="color:#5CBB87;"></i><span style="color:#5CBB87; font-size: 16px;">Alquran</span></a>
+      <a href="{{ route('pages.alquran') }}"><i class="fas fa-book-open" style="color:#5CBB87;"></i><span style="color:#5CBB87; font-size: 16px;">Alquran</span></a>
     </li>
     <li class="dropdown">
-      <a href="{{ route('pages.tambahan') }}" class="nav-link" data-toggle="dropdown"><i class="fas fa-align-justify fa-2x" style="color:#5CBB87;"></i> <span style="color:#5CBB87; font-size: 16px;">Playlist</span> <i href="{{ route('pages.tambahan') }} " class="far fa-plus-circle fa-2x" style="color: white;"> </i>  </a>                 
+      <a href="{{ route('pages.tambahan') }}" class="nav-link" data-toggle="dropdown"><i class="fas fa-align-justify" style="color:#5CBB87;"></i> <span style="color:#5CBB87; font-size: 16px;">Playlist</span> <i href="{{ route('pages.tambahan') }} " class="far fa-plus-circle" style="color: white;"> </i>  </a>                 
       <ul class="dropdown-menu" style="display: none;">
         <hr style="background: white">
         <li><a class="nav-link" style="color:#5CBB87; font-size: 16px;" href="{{ route('pages.playlist') }}">Playlist 1 </a></li>
