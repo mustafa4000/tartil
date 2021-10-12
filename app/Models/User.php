@@ -25,6 +25,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'avatar',
         'google_id'
     ];
 
@@ -52,4 +53,12 @@ class User extends Authenticatable
         return $this->hasMany(Playlist::class, 'playlist_id', 'id');
     }
 
+    public function getAvatarAttribute($avatar)
+    {
+        if ($avatar != null) :
+            return asset('storage/donaturs/'.$avatar);
+        else :
+            return 'https://ui-avatars.com/api/?name=' . str_replace(' ', '+', $this->name) . '&background=4e73df&color=ffffff&size=100';
+        endif;
+    }
 }

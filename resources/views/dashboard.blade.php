@@ -18,13 +18,14 @@
         <table class="table">
             <thead>
                 <tr>
+                    <th scope="col col-sm-1" style="color: #9D9D9D; background: white;"></th>
                     <th scope="col col-sm-1" style="color: #9D9D9D; background: white;">Sura Name</th>
                     <th scope="col col-sm-1" style="color: #9D9D9D; background: white;">Reciter</th>
                     <th scope="col col-sm-1" style="color: #9D9D9D; background: white;">Rewayat</th>
                     <th scope="col col-sm-1" style="color: #9D9D9D; background: white;">Duraiton</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody> 
                 <tr>
                     @foreach ($playlists as $key=> $playslist)
                     <th scope="row">

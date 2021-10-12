@@ -74,79 +74,22 @@
             <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
           </ul>
           <div class="search-element">
-            <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="600" style="background: #F6F6F6;">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="500" style="background: #F6F6F6;">
             <button class="btn" type="submit"><i class="fas fa-search"></i></button>
-            <div class="search-backdrop"></div>
-            <div class="search-result">
-              <div class="search-header">
-                Histories
-              </div>
-              <div class="search-item">
-                <a href="#">How to hack NASA using CSS</a>
-                <a href="#" class="search-close"><i class="fas fa-times"></i></a>
-              </div>
-              <div class="search-item">
-                <a href="#">Kodinger.com</a>
-                <a href="#" class="search-close"><i class="fas fa-times"></i></a>
-              </div>
-              <div class="search-item">
-                <a href="#">#Stisla</a>
-                <a href="#" class="search-close"><i class="fas fa-times"></i></a>
-              </div>
-              <div class="search-header">
-                Result
-              </div>
-              <div class="search-item">
-                <a href="#">
-                  <img class="mr-3 rounded" width="30" src="../assets/img/products/product-3-50.png" alt="product">
-                  oPhone S9 Limited Edition
-                </a>
-              </div>
-              <div class="search-item">
-                <a href="#">
-                  <img class="mr-3 rounded" width="30" src="../assets/img/products/product-2-50.png" alt="product">
-                  Drone X2 New Gen-7
-                </a>
-              </div>
-              <div class="search-item">
-                <a href="#">
-                  <img class="mr-3 rounded" width="30" src="../assets/img/products/product-1-50.png" alt="product">
-                  Headphone Blitz
-                </a>
-              </div>
-              <div class="search-header">
-                Projects
-              </div>
-              <div class="search-item">
-                <a href="#">
-                  <div class="search-icon bg-danger text-white mr-3">
-                    <i class="fas fa-code"></i>
-                  </div>
-                  Stisla Admin Template
-                </a>
-              </div>
-              <div class="search-item">
-                <a href="#">
-                  <div class="search-icon bg-primary text-white mr-3">
-                    <i class="fas fa-laptop"></i>
-                  </div>
-                  Create a new Homepage Design
-                </a>
-              </div>
-            </div>
           </div>
         </form>
         <ul class="navbar-nav navbar-right">  
           @if (Route::has('login'))
             <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+              
               <div class="row">
-                <div class="mr-3">  
+                <div class="">  
                   <a href="" style="color:#2F2F2F;">
                     <i class="far fa-donate" style="width: 18px"></i>  
                     <b class="mr-2" style="font-size: 18px">Donasi</b> 
                   </a>
                 </div>
-                <div class="mr-3">
+                <div class="">
                   <a href="" style="color:#2F2F2F;"> 
                     <i class="far fa-globe" style="width: 18px"></i> 
                     <b class="mr-2" style="font-size: 18px">EN</b> 
@@ -268,102 +211,100 @@
               </tbody>
             </table>
 
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  <h5 style="color: #2F2F2F">Most Popular Reciter</h5>
-                </div>
-                <div class="col">
-                  <a href=""> <p style="text-align: end; color:#169E53;">See all</p> </a>
-                </div>
+            <div class="row">
+              <div class="col">
+                <h5 style="color: #2F2F2F">Most Popular Reciter</h5>
               </div>
-              
-              <div class="row justify-align-center">
-                  <div class="col-md-2">
-                    <div class="card w3-white w3-hover-shadow" style="width: 10rem;">
-                      <img class="card-img-top"  class="img-rounded" src="{{ url('/assets/imgtartil/abdul_muhsin.jpg') }}" style="border-radius: 8px;" alt="Card image cap">
-                      <div class="m-3 text-center">
-                        <div class="card-title">
-                            <a href=""
-                                style="font-size: 11px; color:#2F2F2F; text-align: center;">Abdul Muhsin Al Qasim
-                            </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-2">
-                    <div class="card w3-white w3-hover-shadow" style="width: 10rem;">
-                      <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/abdul_rahman.jpeg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
-                      <div class="m-3 text-center">
-                        <div class="card-title">
-                            <a href=""
-                                style="font-size: 11px; color:#2F2F2F; text-align: center;">Abdul Rahman Al Yusuf
-                            </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-2">
-                    <div class="card w3-white w3-hover-shadow" style="width: 10rem;">
-                      <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/abdulraman.jpg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
-                      <div class="m-3 text-center">
-                        <div class="card-title">
-                            <a href=""
-                                style="font-size: 11px; color:#2F2F2F; text-align: center;">Abdul Rahman Jamal Aloosi
-                            </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-2">
-                    <div class="card w3-white w3-hover-shadow" style="width: 10rem;">
-                      <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/abdulhaneef.jpg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
-                      <div class="m-3 text-center">
-                        <div class="card-title">
-                            <a href=""
-                                style="font-size: 11px; color:#2F2F2F; text-align: center;">Abdul Wadood Haneef
-                            </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-2">
-                    <div class="card w3-white w3-hover-shadow" style="width: 10rem;">
-                      <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/abdulwali.jpeg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
-                      <div class="m-3 text-center">
-                        <div class="card-title">
-                            <a href=""
-                                style="font-size: 11px; color:#2F2F2F; text-align: center;">Abdul Wali Al Arkani
-                            </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-2">
-                      <div class="card w3-white w3-hover-shadow" style="width: 10rem;">
-                      <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/abdulkabir.jpg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
-                      <div class="m-3 text-center">
-                        <div class="card-title">
-                            <a href=""
-                                style="font-size: 11px; color:#2F2F2F; text-align: center;">Abdulkabir Al Hadidi
-                            </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  {{-- <div class="col-md-2">
-                      <div class="card w3-white w3-hover-shadow" style="width: 10rem;">
-                      <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/Abdullah_al_buraimi.jpeg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
-                      <div class="m-3 text-center">
-                        <div class="card-title">
-                            <a href=""
-                                style="font-size: 11px; color:#2F2F2F; text-align: center;">Abdullah Al Buraimi
-                            </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div> --}}
+              <div class="col">
+                <a href=""> <p style="text-align: end; color:#169E53;">See all</p> </a>
               </div>
+            </div>
+         
+            <div class="row justify-align-center">
+                <div class="col-md-2">
+                  <div class="card w3-white w3-hover-shadow" style="width: 10rem;">
+                    <img class="card-img-top"  class="img-rounded" src="{{ url('/assets/imgtartil/abdul_muhsin.jpg') }}" style="border-radius: 8px;" alt="Card image cap">
+                    <div class="m-3 text-center">
+                      <div class="card-title">
+                          <a href=""
+                              style="font-size: 11px; color:#2F2F2F; text-align: center;">Abdul Muhsin Al Qasim
+                          </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2">
+                  <div class="card w3-white w3-hover-shadow" style="width: 10rem;">
+                    <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/abdul_rahman.jpeg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
+                    <div class="m-3 text-center">
+                      <div class="card-title">
+                          <a href=""
+                              style="font-size: 11px; color:#2F2F2F; text-align: center;">Abdul Rahman Al Yusuf
+                          </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2">
+                  <div class="card w3-white w3-hover-shadow" style="width: 10rem;">
+                    <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/abdulraman.jpg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
+                    <div class="m-3 text-center">
+                      <div class="card-title">
+                          <a href=""
+                              style="font-size: 11px; color:#2F2F2F; text-align: center;">Abdul Rahman Jamal Aloosi
+                          </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2">
+                  <div class="card w3-white w3-hover-shadow" style="width: 10rem;">
+                    <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/abdulhaneef.jpg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
+                    <div class="m-3 text-center">
+                      <div class="card-title">
+                          <a href=""
+                              style="font-size: 11px; color:#2F2F2F; text-align: center;">Abdul Wadood Haneef
+                          </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2">
+                  <div class="card w3-white w3-hover-shadow" style="width: 10rem;">
+                    <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/abdulwali.jpeg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
+                    <div class="m-3 text-center">
+                      <div class="card-title">
+                          <a href=""
+                              style="font-size: 11px; color:#2F2F2F; text-align: center;">Abdul Wali Al Arkani
+                          </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card w3-white w3-hover-shadow" style="width: 10rem;">
+                    <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/abdulkabir.jpg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
+                    <div class="m-3 text-center">
+                      <div class="card-title">
+                          <a href=""
+                              style="font-size: 11px; color:#2F2F2F; text-align: center;">Abdulkabir Al Hadidi
+                          </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {{-- <div class="col-md-2">
+                    <div class="card w3-white w3-hover-shadow" style="width: 10rem;">
+                    <img class="card-img-top" class="img-rounded" src="{{ url('/assets/imgtartil/Abdullah_al_buraimi.jpeg') }}" width="132px" height="132px" style="border-radius: 8px;" alt="Card image cap">
+                    <div class="m-3 text-center">
+                      <div class="card-title">
+                          <a href=""
+                              style="font-size: 11px; color:#2F2F2F; text-align: center;">Abdullah Al Buraimi
+                          </a>
+                      </div>
+                    </div>
+                  </div>
+                </div> --}}
             </div>
 
             <div>
@@ -407,7 +348,7 @@
                 </div>
                 
                 <div class="column">
-                  <div class="card w3-white w3-hover-shadow">
+                  <div class="card w3-white w3-hover-shadow ">
                     <div class="row">
                       <div class="col">
                           <h6 class="card-title">

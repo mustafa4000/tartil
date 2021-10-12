@@ -15,8 +15,8 @@ class CreateMRSPlaylistsTable extends Migration
     {
         Schema::create('murotal_reciter_surah_playlists', function (Blueprint $table) {
             $table->id();
-            $table->integer('murotal_reciter_surah_id');
-            $table->integer('playlist_id');
+            $table->unsignedInteger('murotal_reciter_surah_id');
+            $table->unsignedInteger('playlist_id');
             $table->timestamps();
         });
     }

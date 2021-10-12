@@ -41,9 +41,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('profile', [ProfileController::class, 'update'])->name('profile.update');
 
-    Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => [LanguageController::class, 'switchLang']]);
-    Route::get('/languageDemo', [DashboardController::class, 'languageDemo']);
-
     Route::middleware(['admin'])->group(function () {
         Route::resource('reciters', ReciterController::class)->except('show');
         Route::resource('surahs', SurahController::class)->except('show');

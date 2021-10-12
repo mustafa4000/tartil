@@ -15,8 +15,8 @@ class CreateReciterRiwayatsTable extends Migration
     {
         Schema::create('reciter_riwayats', function (Blueprint $table) {
             $table->id();
-            $table->integer('reciter_id');
-            $table->integer('riwayat_id');
+            $table->unsignedInteger('reciter_id');
+            $table->unsignedInteger('riwayat_id');
             $table->timestamps();
         });
     }

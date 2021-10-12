@@ -15,9 +15,9 @@ class CreateMRSTable extends Migration
     {
         Schema::create('murotal_reciter_surah', function (Blueprint $table) {
             $table->id();
-            $table->integer('murotal_id');
-            $table->integer('reciter_id');
-            $table->integer('surah_id');
+            $table->unsignedInteger('murotal_id');
+            $table->unsignedInteger('reciter_id');
+            $table->unsignedInteger('surah_id');
             $table->timestamps();
         });
     }
